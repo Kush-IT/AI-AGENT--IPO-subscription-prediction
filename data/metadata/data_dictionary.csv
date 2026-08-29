@@ -1,0 +1,67 @@
+column_name,description,data_type,unit,source,feature_or_target,allowed_time_direction,leakage_risk,missing_value_policy
+ipo_id,Unique alphanumeric identifier for each IPO,STRING,CATEGORICAL,SYSTEM,IDENTIFIER,STATIC_METADATA,NONE,NEVER_NULL
+company_name,Official registered name of the issuing company,STRING,TEXT,SRC_SEBI_01,METADATA,STATIC_METADATA,NONE,NEVER_NULL
+normalized_company_name,Standardized lowercase alphanumeric company slug,STRING,TEXT,SYSTEM,METADATA,STATIC_METADATA,NONE,NEVER_NULL
+isin,International Securities Identification Number,STRING,ALPHANUMERIC,SRC_NSE_01,METADATA,STATIC_METADATA,NONE,OPTIONAL_NULL
+exchange,Primary listing exchange (NSE/BSE),STRING,CATEGORICAL,SRC_NSE_01,METADATA,STATIC_METADATA,NONE,NEVER_NULL
+ipo_type,Market segment classification (MAINBOARD/SME),STRING,CATEGORICAL,SRC_SEBI_01,METADATA,STATIC_METADATA,NONE,NEVER_NULL
+sector,Broad economic industry classification,STRING,CATEGORICAL,SRC_NSE_01,FEATURE,PRE_IPO_ONLY,LOW,FALLBACK_OTHERS
+industry,Specific sub-industry sector classification,STRING,CATEGORICAL,SRC_NSE_01,FEATURE,PRE_IPO_ONLY,LOW,FALLBACK_OTHERS
+announcement_date,Date on which the IPO was formally announced to public,DATE,YYYY-MM-DD,SRC_SEBI_01,METADATA,PRE_IPO_ONLY,NONE,OPTIONAL_NULL
+anchor_date,Date on which anchor investor bidding occurred,DATE,YYYY-MM-DD,SRC_NSE_01,METADATA,PRE_IPO_ONLY,NONE,OPTIONAL_NULL
+ipo_open_date,First day of public subscription window,DATE,YYYY-MM-DD,SRC_NSE_01,METADATA,STATIC_METADATA,NONE,NEVER_NULL
+ipo_close_date,Final day of public subscription window,DATE,YYYY-MM-DD,SRC_NSE_01,METADATA,STATIC_METADATA,NONE,NEVER_NULL
+allotment_date,Date when basis of allotment is finalized,DATE,YYYY-MM-DD,SRC_BSE_01,METADATA,POST_IPO_ONLY,HIGH,NULL_IF_PRE_IPO
+listing_date,Date when shares begin secondary trading on exchange,DATE,YYYY-MM-DD,SRC_NSE_01,METADATA,POST_IPO_ONLY,HIGH,NULL_IF_PRE_IPO
+feature_cutoff_datetime,Strict latest timestamp for pre-IPO feature inclusion,DATETIME,ISO_8601,SYSTEM,METADATA,BOUNDARY_MARKER,NONE,NEVER_NULL
+issue_size_in_crore,Total capital raised across all tranches in INR Crores,FLOAT,INR_CRORES,SRC_NSE_01,FEATURE,PRE_IPO_ONLY,NONE,REQUIRED_NON_ZERO
+fresh_issue_in_crore,Portion of capital raised as fresh equity capital,FLOAT,INR_CRORES,SRC_NSE_01,FEATURE,PRE_IPO_ONLY,NONE,ZERO_IF_OFFER_FOR_SALE_ONLY
+ofs_in_crore,Portion of capital raised as Offer for Sale from existing promoters,FLOAT,INR_CRORES,SRC_NSE_01,FEATURE,PRE_IPO_ONLY,NONE,ZERO_IF_FRESH_ISSUE_ONLY
+fresh_issue_percentage,Percentage of total issue size that is fresh issue,FLOAT,PERCENTAGE,SYSTEM,FEATURE,PRE_IPO_ONLY,NONE,COMPUTED
+ofs_percentage,Percentage of total issue size that is Offer for Sale,FLOAT,PERCENTAGE,SYSTEM,FEATURE,PRE_IPO_ONLY,NONE,COMPUTED
+price_low,Lower bound of the IPO price band in INR,FLOAT,INR,SRC_NSE_01,FEATURE,PRE_IPO_ONLY,NONE,REQUIRED_POSITIVE
+price_high,Upper bound of the IPO price band in INR (Issue Price),FLOAT,INR,SRC_NSE_01,FEATURE,PRE_IPO_ONLY,NONE,REQUIRED_POSITIVE
+price_band_spread_pct,Percentage difference between upper and lower price band,FLOAT,PERCENTAGE,SYSTEM,FEATURE,PRE_IPO_ONLY,NONE,COMPUTED
+lot_size,Minimum number of shares that can be bid for in a single lot,INTEGER,SHARES,SRC_NSE_01,FEATURE,PRE_IPO_ONLY,NONE,REQUIRED_POSITIVE
+min_retail_application_amount,Minimum capital in INR required for retail application (lot_size * price_high),FLOAT,INR,SYSTEM,FEATURE,PRE_IPO_ONLY,NONE,COMPUTED
+face_value,Nominal face value per equity share in INR,FLOAT,INR,SRC_SEBI_01,FEATURE,PRE_IPO_ONLY,NONE,REQUIRED_POSITIVE
+shares_offered,Total number of equity shares offered to the public,INTEGER,SHARES,SRC_NSE_01,FEATURE,PRE_IPO_ONLY,NONE,REQUIRED_POSITIVE
+qib_shares_offered,Number of shares reserved for Qualified Institutional Buyers,INTEGER,SHARES,SRC_NSE_01,FEATURE,PRE_IPO_ONLY,NONE,REQUIRED_POSITIVE
+nii_shares_offered,Number of shares reserved for Non-Institutional Investors,INTEGER,SHARES,SRC_NSE_01,FEATURE,PRE_IPO_ONLY,NONE,REQUIRED_POSITIVE
+retail_shares_offered,Number of shares reserved for Retail Individual Investors,INTEGER,SHARES,SRC_NSE_01,FEATURE,PRE_IPO_ONLY,NONE,REQUIRED_POSITIVE
+employee_shares_offered,Number of shares reserved for eligible employees,INTEGER,SHARES,SRC_NSE_01,FEATURE,PRE_IPO_ONLY,NONE,ZERO_IF_NOT_OFFERED
+qib_quota_pct,Percentage quota allocated to QIBs (e.g. 50% or 75%),FLOAT,PERCENTAGE,SYSTEM,FEATURE,PRE_IPO_ONLY,NONE,COMPUTED
+nii_quota_pct,Percentage quota allocated to NIIs (e.g. 15%),FLOAT,PERCENTAGE,SYSTEM,FEATURE,PRE_IPO_ONLY,NONE,COMPUTED
+retail_quota_pct,Percentage quota allocated to Retail (e.g. 35% or 10%),FLOAT,PERCENTAGE,SYSTEM,FEATURE,PRE_IPO_ONLY,NONE,COMPUTED
+revenue_latest_cr,Annual operating revenue for most recent fiscal year in INR Cr,FLOAT,INR_CRORES,SRC_SEBI_01,FEATURE,PRE_IPO_ONLY,NONE,REQUIRED_POSITIVE
+revenue_cagr_3yr,3-year Compound Annual Growth Rate of Revenue in percentage,FLOAT,PERCENTAGE,SRC_SEBI_01,FEATURE,PRE_IPO_ONLY,NONE,MEDIAN_IMPUTE
+pat_latest_cr,Profit After Tax for most recent fiscal year in INR Cr,FLOAT,INR_CRORES,SRC_SEBI_01,FEATURE,PRE_IPO_ONLY,NONE,REQUIRED
+pat_cagr_3yr,3-year Compound Annual Growth Rate of Profit After Tax in percentage,FLOAT,PERCENTAGE,SRC_SEBI_01,FEATURE,PRE_IPO_ONLY,NONE,MEDIAN_IMPUTE
+ebitda_margin_pct,Operating EBITDA margin percentage for latest fiscal year,FLOAT,PERCENTAGE,SRC_SEBI_01,FEATURE,PRE_IPO_ONLY,NONE,MEDIAN_IMPUTE
+eps_pre_ipo,Diluted Earnings Per Share pre-issue in INR,FLOAT,INR,SRC_SEBI_01,FEATURE,PRE_IPO_ONLY,NONE,MEDIAN_IMPUTE
+roe_pct,Return on Equity percentage for latest fiscal year,FLOAT,PERCENTAGE,SRC_SEBI_01,FEATURE,PRE_IPO_ONLY,NONE,MEDIAN_IMPUTE
+roce_pct,Return on Capital Employed percentage for latest fiscal year,FLOAT,PERCENTAGE,SRC_SEBI_01,FEATURE,PRE_IPO_ONLY,NONE,MEDIAN_IMPUTE
+debt_equity_ratio,Total debt to equity ratio prior to public issue,FLOAT,RATIO,SRC_SEBI_01,FEATURE,PRE_IPO_ONLY,NONE,ZERO_IF_DEBT_FREE
+operating_cash_flow_cr,Cash flow from operations in latest fiscal year in INR Cr,FLOAT,INR_CRORES,SRC_SEBI_01,FEATURE,PRE_IPO_ONLY,NONE,MEDIAN_IMPUTE
+pe_ratio,Price to Earnings ratio at upper price band based on latest EPS,FLOAT,RATIO,SRC_CHITTOR_01,FEATURE,PRE_IPO_ONLY,NONE,REQUIRED_POSITIVE
+pb_ratio,Price to Book ratio at upper price band,FLOAT,RATIO,SRC_CHITTOR_01,FEATURE,PRE_IPO_ONLY,NONE,MEDIAN_IMPUTE
+industry_pe,Weighted average P/E ratio of listed industry peers,FLOAT,RATIO,SRC_SEBI_01,FEATURE,PRE_IPO_ONLY,NONE,MEDIAN_IMPUTE
+valuation_discount_pct,Percentage discount of IPO P/E relative to industry P/E,FLOAT,PERCENTAGE,SYSTEM,FEATURE,PRE_IPO_ONLY,NONE,COMPUTED
+nifty_1d_return,1-day percentage change in NIFTY 50 prior to open date,FLOAT,PERCENTAGE,SRC_YAHOO_01,FEATURE,PRE_IPO_ONLY,NONE,REQUIRED
+nifty_5d_return,5-day percentage change in NIFTY 50 prior to open date,FLOAT,PERCENTAGE,SRC_YAHOO_01,FEATURE,PRE_IPO_ONLY,NONE,REQUIRED
+nifty_20d_return,20-day percentage change in NIFTY 50 prior to open date,FLOAT,PERCENTAGE,SRC_YAHOO_01,FEATURE,PRE_IPO_ONLY,NONE,REQUIRED
+india_vix,India VIX index level on the day prior to open date,FLOAT,INDEX_POINTS,SRC_YAHOO_01,FEATURE,PRE_IPO_ONLY,NONE,REQUIRED_POSITIVE
+india_vix_5d_change,5-day change in India VIX index points prior to open date,FLOAT,INDEX_POINTS,SRC_YAHOO_01,FEATURE,PRE_IPO_ONLY,NONE,REQUIRED
+market_trend,Regime label for market trend (BULLISH/NEUTRAL/BEARISH),STRING,CATEGORICAL,SYSTEM,FEATURE,PRE_IPO_ONLY,NONE,COMPUTED
+gmp_in_inr,Latest Grey Market Premium in INR observed prior to cutoff,FLOAT,INR,SRC_INVESTORGAIN_01,FEATURE,PRE_IPO_ONLY,MEDIUM,NOT_AVAILABLE_IF_MISSING
+gmp_percentage,GMP as a percentage of upper price band (gmp / price_high * 100),FLOAT,PERCENTAGE,SYSTEM,FEATURE,PRE_IPO_ONLY,MEDIUM,NOT_AVAILABLE_IF_MISSING
+news_count,Number of verified news articles published before cutoff,INTEGER,COUNT,SRC_ET_01,FEATURE,PRE_IPO_ONLY,LOW,ZERO_IF_NO_NEWS
+average_sentiment_score,Mean sentiment polarity of pre-IPO news articles (-1 to +1),FLOAT,SCORE,SRC_ET_01,FEATURE,PRE_IPO_ONLY,LOW,ZERO_IF_NO_NEWS
+positive_news_ratio,Fraction of pre-IPO news articles with positive sentiment,FLOAT,RATIO,SRC_ET_01,FEATURE,PRE_IPO_ONLY,LOW,ZERO_IF_NO_NEWS
+previous_sector_avg_subscription,Historical expanding average subscription of preceding sector IPOs,FLOAT,MULTIPLIER,SYSTEM,FEATURE,PRE_IPO_ONLY,NONE,COMPUTED_EXPANDING
+previous_general_avg_subscription,Historical expanding average subscription of all preceding IPOs,FLOAT,MULTIPLIER,SYSTEM,FEATURE,PRE_IPO_ONLY,NONE,COMPUTED_EXPANDING
+qib_subscription,Final subscription multiple for QIB category,FLOAT,MULTIPLIER,SRC_BSE_01,TARGET,FUTURE_TARGET_ONLY,HIGH,REQUIRED_NON_NEGATIVE
+nii_subscription,Final subscription multiple for NII/HNI category,FLOAT,MULTIPLIER,SRC_BSE_01,TARGET,FUTURE_TARGET_ONLY,HIGH,REQUIRED_NON_NEGATIVE
+retail_subscription,Final subscription multiple for Retail category,FLOAT,MULTIPLIER,SRC_BSE_01,TARGET,FUTURE_TARGET_ONLY,HIGH,REQUIRED_NON_NEGATIVE
+employee_subscription,Final subscription multiple for Employee quota,FLOAT,MULTIPLIER,SRC_BSE_01,TARGET,FUTURE_TARGET_ONLY,HIGH,NOT_APPLICABLE_IF_NONE
+total_subscription,Final total issue subscription multiple,FLOAT,MULTIPLIER,SRC_BSE_01,TARGET,FUTURE_TARGET_ONLY,HIGH,REQUIRED_NON_NEGATIVE

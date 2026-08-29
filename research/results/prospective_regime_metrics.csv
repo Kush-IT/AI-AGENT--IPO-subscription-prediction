@@ -1,0 +1,2 @@
+market_trend,vix_regime,sample_count,total_mae,total_mape,sample_size_flag
+NEUTRAL,LOW_VOLATILITY (< 15.0),1,2.14,4.1683,INSUFFICIENT_SAMPLE_SIZE (N < 5)

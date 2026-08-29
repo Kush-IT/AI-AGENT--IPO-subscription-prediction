@@ -1,0 +1,2 @@
+sector,sample_count,total_mae,qib_mae,nii_mae,retail_mae,sample_size_flag
+Capital Goods,1,2.14,4.91,4.07,0.34,LOW_SAMPLE_SIZE (N < 5)

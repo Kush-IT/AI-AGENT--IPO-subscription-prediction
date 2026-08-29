@@ -1,0 +1,457 @@
+{
+  "company_name": "Lumino Industries Ltd",
+  "ipo_open_date": "2026-08-27",
+  "statutory_feature_cutoff": "2026-08-27T09:59:59+05:30",
+  "feature_provenance": {
+    "issue_size_in_crore": {
+      "value": 700.0,
+      "source": "SEBI / RHP Filing",
+      "source_url": "https://www.sebi.gov.in/filings/public-issues/aug-2026/lumino-industries-limited-rhp_85642.html",
+      "observed_at": "2026-08-21T18:00:00+05:30",
+      "retrieved_at": "2026-08-26T16:00:00+05:30",
+      "feature_cutoff": "2026-08-27T09:59:59+05:30",
+      "status": "VALID",
+      "validation_status": "EX_ANTE_VALID"
+    },
+    "issue_size_log": {
+      "value": 6.5525,
+      "source": "Derived: np.log1p(issue_size_in_crore)",
+      "source_url": "internal://backend/ml/features.py",
+      "observed_at": "2026-08-21T18:00:00+05:30",
+      "retrieved_at": "2026-08-26T16:00:00+05:30",
+      "feature_cutoff": "2026-08-27T09:59:59+05:30",
+      "status": "VALID",
+      "validation_status": "EX_ANTE_VALID"
+    },
+    "fresh_issue_percentage": {
+      "value": 71.43,
+      "source": "SEBI / RHP Filing (Rs 500 Cr Fresh / Rs 700 Cr Total)",
+      "source_url": "https://www.sebi.gov.in/filings/public-issues/aug-2026/lumino-industries-limited-rhp_85642.html",
+      "observed_at": "2026-08-21T18:00:00+05:30",
+      "retrieved_at": "2026-08-26T16:00:00+05:30",
+      "feature_cutoff": "2026-08-27T09:59:59+05:30",
+      "status": "VALID",
+      "validation_status": "EX_ANTE_VALID"
+    },
+    "ofs_percentage": {
+      "value": 28.57,
+      "source": "SEBI / RHP Filing (Rs 200 Cr OFS / Rs 700 Cr Total)",
+      "source_url": "https://www.sebi.gov.in/filings/public-issues/aug-2026/lumino-industries-limited-rhp_85642.html",
+      "observed_at": "2026-08-21T18:00:00+05:30",
+      "retrieved_at": "2026-08-26T16:00:00+05:30",
+      "feature_cutoff": "2026-08-27T09:59:59+05:30",
+      "status": "VALID",
+      "validation_status": "EX_ANTE_VALID"
+    },
+    "price_low": {
+      "value": 78.0,
+      "source": "SEBI / RHP Filing Price Band Announcement",
+      "source_url": "https://www.sebi.gov.in/filings/public-issues/aug-2026/lumino-industries-limited-rhp_85642.html",
+      "observed_at": "2026-08-23T10:00:00+05:30",
+      "retrieved_at": "2026-08-26T16:00:00+05:30",
+      "feature_cutoff": "2026-08-27T09:59:59+05:30",
+      "status": "VALID",
+      "validation_status": "EX_ANTE_VALID"
+    },
+    "price_high": {
+      "value": 82.0,
+      "source": "SEBI / RHP Filing Price Band Announcement",
+      "source_url": "https://www.sebi.gov.in/filings/public-issues/aug-2026/lumino-industries-limited-rhp_85642.html",
+      "observed_at": "2026-08-23T10:00:00+05:30",
+      "retrieved_at": "2026-08-26T16:00:00+05:30",
+      "feature_cutoff": "2026-08-27T09:59:59+05:30",
+      "status": "VALID",
+      "validation_status": "EX_ANTE_VALID"
+    },
+    "price_band_spread_pct": {
+      "value": 5.13,
+      "source": "Derived: ((82 - 78) / 78) * 100",
+      "source_url": "internal://backend/ml/features.py",
+      "observed_at": "2026-08-23T10:00:00+05:30",
+      "retrieved_at": "2026-08-26T16:00:00+05:30",
+      "feature_cutoff": "2026-08-27T09:59:59+05:30",
+      "status": "VALID",
+      "validation_status": "EX_ANTE_VALID"
+    },
+    "lot_size": {
+      "value": 182.0,
+      "source": "NSE / BSE Public Issue Notice",
+      "source_url": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
+      "observed_at": "2026-08-23T10:00:00+05:30",
+      "retrieved_at": "2026-08-26T16:00:00+05:30",
+      "feature_cutoff": "2026-08-27T09:59:59+05:30",
+      "status": "VALID",
+      "validation_status": "EX_ANTE_VALID"
+    },
+    "min_retail_application_amount": {
+      "value": 14924.0,
+      "source": "Derived: lot_size * price_high",
+      "source_url": "internal://backend/ml/features.py",
+      "observed_at": "2026-08-23T10:00:00+05:30",
+      "retrieved_at": "2026-08-26T16:00:00+05:30",
+      "feature_cutoff": "2026-08-27T09:59:59+05:30",
+      "status": "VALID",
+      "validation_status": "EX_ANTE_VALID"
+    },
+    "face_value": {
+      "value": 5.0,
+      "source": "SEBI / RHP Filing",
+      "source_url": "https://www.sebi.gov.in/filings/public-issues/aug-2026/lumino-industries-limited-rhp_85642.html",
+      "observed_at": "2026-08-21T18:00:00+05:30",
+      "retrieved_at": "2026-08-26T16:00:00+05:30",
+      "feature_cutoff": "2026-08-27T09:59:59+05:30",
+      "status": "VALID",
+      "validation_status": "EX_ANTE_VALID"
+    },
+    "qib_quota_pct": {
+      "value": 50.0,
+      "source": "SEBI / RHP Allocation Schema",
+      "source_url": "https://www.sebi.gov.in/filings/public-issues/aug-2026/lumino-industries-limited-rhp_85642.html",
+      "observed_at": "2026-08-21T18:00:00+05:30",
+      "retrieved_at": "2026-08-26T16:00:00+05:30",
+      "feature_cutoff": "2026-08-27T09:59:59+05:30",
+      "status": "VALID",
+      "validation_status": "EX_ANTE_VALID"
+    },
+    "nii_quota_pct": {
+      "value": 15.0,
+      "source": "SEBI / RHP Allocation Schema",
+      "source_url": "https://www.sebi.gov.in/filings/public-issues/aug-2026/lumino-industries-limited-rhp_85642.html",
+      "observed_at": "2026-08-21T18:00:00+05:30",
+      "retrieved_at": "2026-08-26T16:00:00+05:30",
+      "feature_cutoff": "2026-08-27T09:59:59+05:30",
+      "status": "VALID",
+      "validation_status": "EX_ANTE_VALID"
+    },
+    "retail_quota_pct": {
+      "value": 35.0,
+      "source": "SEBI / RHP Allocation Schema",
+      "source_url": "https://www.sebi.gov.in/filings/public-issues/aug-2026/lumino-industries-limited-rhp_85642.html",
+      "observed_at": "2026-08-21T18:00:00+05:30",
+      "retrieved_at": "2026-08-26T16:00:00+05:30",
+      "feature_cutoff": "2026-08-27T09:59:59+05:30",
+      "status": "VALID",
+      "validation_status": "EX_ANTE_VALID"
+    },
+    "revenue_latest_cr": {
+      "value": 2089.31,
+      "source": "RHP Restated Consolidated Financial Statements (FY26)",
+      "source_url": "https://www.sebi.gov.in/filings/public-issues/aug-2026/lumino-industries-limited-rhp_85642.html",
+      "observed_at": "2026-08-21T18:00:00+05:30",
+      "retrieved_at": "2026-08-26T16:00:00+05:30",
+      "feature_cutoff": "2026-08-27T09:59:59+05:30",
+      "status": "VALID",
+      "validation_status": "EX_ANTE_VALID"
+    },
+    "revenue_cagr_3yr": {
+      "value": 21.10,
+      "source": "Derived 3-Year CAGR: FY24 (1424.63 Cr) to FY26 (2089.31 Cr)",
+      "source_url": "https://www.sebi.gov.in/filings/public-issues/aug-2026/lumino-industries-limited-rhp_85642.html",
+      "observed_at": "2026-08-21T18:00:00+05:30",
+      "retrieved_at": "2026-08-26T16:00:00+05:30",
+      "feature_cutoff": "2026-08-27T09:59:59+05:30",
+      "status": "VALID",
+      "validation_status": "EX_ANTE_VALID"
+    },
+    "pat_latest_cr": {
+      "value": 160.00,
+      "source": "RHP Restated Consolidated Financial Statements (FY26)",
+      "source_url": "https://www.sebi.gov.in/filings/public-issues/aug-2026/lumino-industries-limited-rhp_85642.html",
+      "observed_at": "2026-08-21T18:00:00+05:30",
+      "retrieved_at": "2026-08-26T16:00:00+05:30",
+      "feature_cutoff": "2026-08-27T09:59:59+05:30",
+      "status": "VALID",
+      "validation_status": "EX_ANTE_VALID"
+    },
+    "pat_cagr_3yr": {
+      "value": 35.91,
+      "source": "Derived 3-Year CAGR: FY24 (86.61 Cr) to FY26 (160.00 Cr)",
+      "source_url": "https://www.sebi.gov.in/filings/public-issues/aug-2026/lumino-industries-limited-rhp_85642.html",
+      "observed_at": "2026-08-21T18:00:00+05:30",
+      "retrieved_at": "2026-08-26T16:00:00+05:30",
+      "feature_cutoff": "2026-08-27T09:59:59+05:30",
+      "status": "VALID",
+      "validation_status": "EX_ANTE_VALID"
+    },
+    "ebitda_margin_pct": {
+      "value": 11.71,
+      "source": "RHP Financial KPI Table",
+      "source_url": "https://www.sebi.gov.in/filings/public-issues/aug-2026/lumino-industries-limited-rhp_85642.html",
+      "observed_at": "2026-08-21T18:00:00+05:30",
+      "retrieved_at": "2026-08-26T16:00:00+05:30",
+      "feature_cutoff": "2026-08-27T09:59:59+05:30",
+      "status": "VALID",
+      "validation_status": "EX_ANTE_VALID"
+    },
+    "eps_pre_ipo": {
+      "value": 6.57,
+      "source": "RHP Diluted EPS FY26",
+      "source_url": "https://www.sebi.gov.in/filings/public-issues/aug-2026/lumino-industries-limited-rhp_85642.html",
+      "observed_at": "2026-08-21T18:00:00+05:30",
+      "retrieved_at": "2026-08-26T16:00:00+05:30",
+      "feature_cutoff": "2026-08-27T09:59:59+05:30",
+      "status": "VALID",
+      "validation_status": "EX_ANTE_VALID"
+    },
+    "roe_pct": {
+      "value": 24.62,
+      "source": "RHP RoNW Table FY26",
+      "source_url": "https://www.sebi.gov.in/filings/public-issues/aug-2026/lumino-industries-limited-rhp_85642.html",
+      "observed_at": "2026-08-21T18:00:00+05:30",
+      "retrieved_at": "2026-08-26T16:00:00+05:30",
+      "feature_cutoff": "2026-08-27T09:59:59+05:30",
+      "status": "VALID",
+      "validation_status": "EX_ANTE_VALID"
+    },
+    "roce_pct": {
+      "value": 22.45,
+      "source": "RHP Return on Capital Employed FY26",
+      "source_url": "https://www.sebi.gov.in/filings/public-issues/aug-2026/lumino-industries-limited-rhp_85642.html",
+      "observed_at": "2026-08-21T18:00:00+05:30",
+      "retrieved_at": "2026-08-26T16:00:00+05:30",
+      "feature_cutoff": "2026-08-27T09:59:59+05:30",
+      "status": "VALID",
+      "validation_status": "EX_ANTE_VALID"
+    },
+    "debt_equity_ratio": {
+      "value": 0.88,
+      "source": "RHP Capital Structure & Indebtedness",
+      "source_url": "https://www.sebi.gov.in/filings/public-issues/aug-2026/lumino-industries-limited-rhp_85642.html",
+      "observed_at": "2026-08-21T18:00:00+05:30",
+      "retrieved_at": "2026-08-26T16:00:00+05:30",
+      "feature_cutoff": "2026-08-27T09:59:59+05:30",
+      "status": "VALID",
+      "validation_status": "EX_ANTE_VALID"
+    },
+    "operating_cash_flow_cr": {
+      "value": 156.08,
+      "source": "RHP Restated Cash Flow Statement FY26",
+      "source_url": "https://www.sebi.gov.in/filings/public-issues/aug-2026/lumino-industries-limited-rhp_85642.html",
+      "observed_at": "2026-08-21T18:00:00+05:30",
+      "retrieved_at": "2026-08-26T16:00:00+05:30",
+      "feature_cutoff": "2026-08-27T09:59:59+05:30",
+      "status": "VALID",
+      "validation_status": "EX_ANTE_VALID"
+    },
+    "pe_ratio": {
+      "value": 12.48,
+      "source": "RHP Basis for Issue Price (at Rs 82 cap on FY26 diluted EPS)",
+      "source_url": "https://www.sebi.gov.in/filings/public-issues/aug-2026/lumino-industries-limited-rhp_85642.html",
+      "observed_at": "2026-08-21T18:00:00+05:30",
+      "retrieved_at": "2026-08-26T16:00:00+05:30",
+      "feature_cutoff": "2026-08-27T09:59:59+05:30",
+      "status": "VALID",
+      "validation_status": "EX_ANTE_VALID"
+    },
+    "pb_ratio": {
+      "value": 2.65,
+      "source": "RHP Price-to-Book Ratio (at Rs 82 cap on FY26 NAV)",
+      "source_url": "https://www.sebi.gov.in/filings/public-issues/aug-2026/lumino-industries-limited-rhp_85642.html",
+      "observed_at": "2026-08-21T18:00:00+05:30",
+      "retrieved_at": "2026-08-26T16:00:00+05:30",
+      "feature_cutoff": "2026-08-27T09:59:59+05:30",
+      "status": "VALID",
+      "validation_status": "EX_ANTE_VALID"
+    },
+    "industry_pe": {
+      "value": 35.00,
+      "source": "RHP Listed Industry Peers Valuation Table",
+      "source_url": "https://www.sebi.gov.in/filings/public-issues/aug-2026/lumino-industries-limited-rhp_85642.html",
+      "observed_at": "2026-08-21T18:00:00+05:30",
+      "retrieved_at": "2026-08-26T16:00:00+05:30",
+      "feature_cutoff": "2026-08-27T09:59:59+05:30",
+      "status": "VALID",
+      "validation_status": "EX_ANTE_VALID"
+    },
+    "valuation_discount_pct": {
+      "value": 64.34,
+      "source": "Derived: ((35.00 - 12.48) / 35.00) * 100",
+      "source_url": "internal://backend/ml/features.py",
+      "observed_at": "2026-08-21T18:00:00+05:30",
+      "retrieved_at": "2026-08-26T16:00:00+05:30",
+      "feature_cutoff": "2026-08-27T09:59:59+05:30",
+      "status": "VALID",
+      "validation_status": "EX_ANTE_VALID"
+    },
+    "nifty_1d_return": {
+      "value": -0.52,
+      "source": "NSE Closing Indices (2026-08-26)",
+      "source_url": "https://www.nseindia.com/reports-indices-market-data",
+      "observed_at": "2026-08-26T16:00:00+05:30",
+      "retrieved_at": "2026-08-26T16:05:00+05:30",
+      "feature_cutoff": "2026-08-27T09:59:59+05:30",
+      "status": "VALID",
+      "validation_status": "EX_ANTE_VALID"
+    },
+    "nifty_5d_return": {
+      "value": -1.14,
+      "source": "NSE 5-Day Cumulative Index Return",
+      "source_url": "https://www.nseindia.com/reports-indices-market-data",
+      "observed_at": "2026-08-26T16:00:00+05:30",
+      "retrieved_at": "2026-08-26T16:05:00+05:30",
+      "feature_cutoff": "2026-08-27T09:59:59+05:30",
+      "status": "VALID",
+      "validation_status": "EX_ANTE_VALID"
+    },
+    "nifty_20d_return": {
+      "value": 0.85,
+      "source": "NSE 20-Day Cumulative Index Return",
+      "source_url": "https://www.nseindia.com/reports-indices-market-data",
+      "observed_at": "2026-08-26T16:00:00+05:30",
+      "retrieved_at": "2026-08-26T16:05:00+05:30",
+      "feature_cutoff": "2026-08-27T09:59:59+05:30",
+      "status": "VALID",
+      "validation_status": "EX_ANTE_VALID"
+    },
+    "sensex_1d_return": {
+      "value": -0.24,
+      "source": "BSE Closing Indices (2026-08-26)",
+      "source_url": "https://www.bseindia.com/markets/equity/sensex.aspx",
+      "observed_at": "2026-08-26T16:00:00+05:30",
+      "retrieved_at": "2026-08-26T16:05:00+05:30",
+      "feature_cutoff": "2026-08-27T09:59:59+05:30",
+      "status": "VALID",
+      "validation_status": "EX_ANTE_VALID"
+    },
+    "sensex_5d_return": {
+      "value": -0.98,
+      "source": "BSE 5-Day Cumulative Index Return",
+      "source_url": "https://www.bseindia.com/markets/equity/sensex.aspx",
+      "observed_at": "2026-08-26T16:00:00+05:30",
+      "retrieved_at": "2026-08-26T16:05:00+05:30",
+      "feature_cutoff": "2026-08-27T09:59:59+05:30",
+      "status": "VALID",
+      "validation_status": "EX_ANTE_VALID"
+    },
+    "sensex_20d_return": {
+      "value": 0.72,
+      "source": "BSE 20-Day Cumulative Index Return",
+      "source_url": "https://www.bseindia.com/markets/equity/sensex.aspx",
+      "observed_at": "2026-08-26T16:00:00+05:30",
+      "retrieved_at": "2026-08-26T16:05:00+05:30",
+      "feature_cutoff": "2026-08-27T09:59:59+05:30",
+      "status": "VALID",
+      "validation_status": "EX_ANTE_VALID"
+    },
+    "india_vix": {
+      "value": 10.48,
+      "source": "NSE India VIX Closing Level (2026-08-26)",
+      "source_url": "https://www.nseindia.com/market-data/vix-index",
+      "observed_at": "2026-08-26T16:00:00+05:30",
+      "retrieved_at": "2026-08-26T16:05:00+05:30",
+      "feature_cutoff": "2026-08-27T09:59:59+05:30",
+      "status": "VALID",
+      "validation_status": "EX_ANTE_VALID"
+    },
+    "india_vix_5d_change": {
+      "value": -5.41,
+      "source": "NSE India VIX 5-Day Percentage Shift",
+      "source_url": "https://www.nseindia.com/market-data/vix-index",
+      "observed_at": "2026-08-26T16:00:00+05:30",
+      "retrieved_at": "2026-08-26T16:05:00+05:30",
+      "feature_cutoff": "2026-08-27T09:59:59+05:30",
+      "status": "VALID",
+      "validation_status": "EX_ANTE_VALID"
+    },
+    "previous_sector_avg_subscription": {
+      "value": 38.45,
+      "source": "Expanding Historical Past-Only Mean (Capital Goods t < 2026-08-27)",
+      "source_url": "internal://data/processed/ipo_features_preipo_v2.csv",
+      "observed_at": "2026-08-26T00:00:00+05:30",
+      "retrieved_at": "2026-08-26T16:00:00+05:30",
+      "feature_cutoff": "2026-08-27T09:59:59+05:30",
+      "status": "VALID",
+      "validation_status": "EX_ANTE_VALID"
+    },
+    "previous_general_avg_subscription": {
+      "value": 43.12,
+      "source": "Expanding Historical Past-Only Mean (General t < 2026-08-27)",
+      "source_url": "internal://data/processed/ipo_features_preipo_v2.csv",
+      "observed_at": "2026-08-26T00:00:00+05:30",
+      "retrieved_at": "2026-08-26T16:00:00+05:30",
+      "feature_cutoff": "2026-08-27T09:59:59+05:30",
+      "status": "VALID",
+      "validation_status": "EX_ANTE_VALID"
+    },
+    "gmp_in_inr": {
+      "value": 46.00,
+      "source": "Chittorgarh / InvestorGain Reconciled Pre-Open GMP",
+      "source_url": "https://www.chittorgarh.com/ipo/lumino-industries-ipo-gmp/1842/",
+      "observed_at": "2026-08-26T12:00:00+05:30",
+      "retrieved_at": "2026-08-26T16:00:00+05:30",
+      "feature_cutoff": "2026-08-27T09:59:59+05:30",
+      "status": "VALID",
+      "validation_status": "EX_ANTE_VALID"
+    },
+    "gmp_percentage": {
+      "value": 56.10,
+      "source": "Derived: (46.00 / 82.00) * 100",
+      "source_url": "internal://backend/ml/features.py",
+      "observed_at": "2026-08-26T12:00:00+05:30",
+      "retrieved_at": "2026-08-26T16:00:00+05:30",
+      "feature_cutoff": "2026-08-27T09:59:59+05:30",
+      "status": "VALID",
+      "validation_status": "EX_ANTE_VALID"
+    },
+    "news_count": {
+      "value": 3.0,
+      "source": "Pre-IPO Curated Article Corpus",
+      "source_url": "internal://data/live_predictions/lumino_2026_preipo/news_articles.json",
+      "observed_at": "2026-08-26T14:00:00+05:30",
+      "retrieved_at": "2026-08-26T16:00:00+05:30",
+      "feature_cutoff": "2026-08-27T09:59:59+05:30",
+      "status": "VALID",
+      "validation_status": "EX_ANTE_VALID"
+    },
+    "average_sentiment_score": {
+      "value": 0.65,
+      "source": "FinBERT Sentiment Analysis across Pre-Cutoff Articles",
+      "source_url": "internal://data/live_predictions/lumino_2026_preipo/news_articles.json",
+      "observed_at": "2026-08-26T14:00:00+05:30",
+      "retrieved_at": "2026-08-26T16:00:00+05:30",
+      "feature_cutoff": "2026-08-27T09:59:59+05:30",
+      "status": "VALID",
+      "validation_status": "EX_ANTE_VALID"
+    },
+    "positive_news_ratio": {
+      "value": 0.85,
+      "source": "FinBERT Positive Fraction across Pre-Cutoff Articles",
+      "source_url": "internal://data/live_predictions/lumino_2026_preipo/news_articles.json",
+      "observed_at": "2026-08-26T14:00:00+05:30",
+      "retrieved_at": "2026-08-26T16:00:00+05:30",
+      "feature_cutoff": "2026-08-27T09:59:59+05:30",
+      "status": "VALID",
+      "validation_status": "EX_ANTE_VALID"
+    },
+    "negative_news_ratio": {
+      "value": 0.00,
+      "source": "FinBERT Negative Fraction across Pre-Cutoff Articles",
+      "source_url": "internal://data/live_predictions/lumino_2026_preipo/news_articles.json",
+      "observed_at": "2026-08-26T14:00:00+05:30",
+      "retrieved_at": "2026-08-26T16:00:00+05:30",
+      "feature_cutoff": "2026-08-27T09:59:59+05:30",
+      "status": "VALID",
+      "validation_status": "EX_ANTE_VALID"
+    },
+    "sector": {
+      "value": "Capital Goods",
+      "source": "SEBI / NSE Sectoral Classification (Power Transmission & Cables)",
+      "source_url": "https://www.sebi.gov.in/filings/public-issues/aug-2026/lumino-industries-limited-rhp_85642.html",
+      "observed_at": "2026-08-21T18:00:00+05:30",
+      "retrieved_at": "2026-08-26T16:00:00+05:30",
+      "feature_cutoff": "2026-08-27T09:59:59+05:30",
+      "status": "VALID",
+      "validation_status": "EX_ANTE_VALID"
+    },
+    "market_trend": {
+      "value": "NEUTRAL",
+      "source": "Secondary Index Momentum Classifier (Nifty 20d: +0.85%, VIX: 10.48)",
+      "source_url": "internal://backend/ml/features.py",
+      "observed_at": "2026-08-26T16:00:00+05:30",
+      "retrieved_at": "2026-08-26T16:05:00+05:30",
+      "feature_cutoff": "2026-08-27T09:59:59+05:30",
+      "status": "VALID",
+      "validation_status": "EX_ANTE_VALID"
+    }
+  }
+}

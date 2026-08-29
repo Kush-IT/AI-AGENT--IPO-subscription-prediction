@@ -1,0 +1,47 @@
+{
+  "company_name": "Lumino Industries Ltd",
+  "issue_price_upper_band": 82.0,
+  "statutory_feature_cutoff": "2026-08-27T09:59:59+05:30",
+  "reconciliation_rule": "Deterministic Selection: 1. Latest valid observation prior to cutoff; 2. Cross-verified across independent registries; 3. Reject any post-cutoff observations.",
+  "observations": [
+    {
+      "observation_id": "GMP-LUMINO-001",
+      "source": "InvestorGain IPO GMP Tracker",
+      "source_url": "https://www.investorgain.com/gmp/lumino-industries-ipo-gmp/854/",
+      "observed_at": "2026-08-25T18:30:00+05:30",
+      "gmp_in_inr": 47.0,
+      "gmp_percentage": 57.32,
+      "estimated_listing_price": 129.0,
+      "is_pre_cutoff": true,
+      "status": "VALID_PRE_CUTOFF"
+    },
+    {
+      "observation_id": "GMP-LUMINO-002",
+      "source": "Chittorgarh IPO GMP Desk",
+      "source_url": "https://www.chittorgarh.com/ipo/lumino-industries-ipo-gmp/1842/",
+      "observed_at": "2026-08-26T12:00:00+05:30",
+      "gmp_in_inr": 46.0,
+      "gmp_percentage": 56.10,
+      "estimated_listing_price": 128.0,
+      "is_pre_cutoff": true,
+      "status": "VALID_PRE_CUTOFF_SELECTED"
+    },
+    {
+      "observation_id": "GMP-LUMINO-003",
+      "source": "IPOCentral / IPOWatch Desk",
+      "source_url": "https://ipowatch.in/lumino-industries-ipo-gmp/",
+      "observed_at": "2026-08-26T15:00:00+05:30",
+      "gmp_in_inr": 46.0,
+      "gmp_percentage": 56.10,
+      "estimated_listing_price": 128.0,
+      "is_pre_cutoff": true,
+      "status": "VALID_PRE_CUTOFF_CONFIRMATORY"
+    }
+  ],
+  "selected_reconciled_gmp": {
+    "gmp_in_inr": 46.0,
+    "gmp_percentage": 56.10,
+    "selected_from_observation_id": "GMP-LUMINO-002",
+    "observation_timestamp": "2026-08-26T12:00:00+05:30"
+  }
+}

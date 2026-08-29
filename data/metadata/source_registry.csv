@@ -1,0 +1,8 @@
+source_id,source_name,source_type,source_url,data_type,reliability_level,access_date,notes
+SRC_SEBI_01,Securities and Exchange Board of India (SEBI),REGULATOR,https://www.sebi.gov.in/filings/public-issues.html,DRHP_RHP_PROSPECTUS,PRIMARY,2026-08-20,Official regulatory filings and Offer Documents
+SRC_NSE_01,National Stock Exchange of India (NSE),EXCHANGE,https://www.nseindia.com/market-data/all-upcoming-issues-ipo,ISSUE_TERMS_AND_CIRCULARS,PRIMARY,2026-08-20,Official issue dates price bands lot sizes and bid quantities
+SRC_BSE_01,BSE India (Bombay Stock Exchange),EXCHANGE,https://www.bseindia.com/publicissue.html,SUBSCRIPTION_AND_ALLOTMENT,PRIMARY,2026-08-20,Official daily and cumulative category-wise bid reports
+SRC_CHITTOR_01,Chittorgarh IPO Database,AGGREGATOR,https://www.chittorgarh.com/ipo/ipo_dashboard.asp,HISTORICAL_IPO_ARCHIVE,SECONDARY,2026-08-20,Verified historical issue terms subscription multiples and financial summaries
+SRC_INVESTORGAIN_01,InvestorGain Historical Portal,AGGREGATOR,https://www.investorgain.com/report/live-ipo-gmp/331/,PRE_IPO_GMP_ARCHIVE,SECONDARY,2026-08-20,Historical pre-IPO grey market premium observations with timestamps
+SRC_YAHOO_01,Yahoo Finance (NSE Market Data),MARKET_DATA_PROVIDER,https://finance.yahoo.com/quote/%5ENSEI/,INDEX_AND_VIX_HISTORY,PRIMARY,2026-08-20,Daily closing prices for NIFTY 50 and India VIX index
+SRC_ET_01,The Economic Times IPO Archive,NEWS_PORTAL,https://economictimes.indiatimes.com/markets/ipos/,PRE_IPO_NEWS_AND_SENTIMENT,SECONDARY,2026-08-20,Timestamped pre-IPO editorial coverage and analyst commentary

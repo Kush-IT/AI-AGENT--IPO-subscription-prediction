@@ -1,0 +1,61 @@
+{
+  "IPO_Structure": [
+    "issue_size_in_crore",
+    "issue_size_log",
+    "fresh_issue_percentage",
+    "ofs_percentage",
+    "price_low",
+    "price_high",
+    "price_band_spread_pct",
+    "lot_size",
+    "min_retail_application_amount",
+    "face_value",
+    "qib_quota_pct",
+    "nii_quota_pct",
+    "retail_quota_pct"
+  ],
+  "Fundamentals": [
+    "revenue_latest_cr",
+    "revenue_cagr_3yr",
+    "pat_latest_cr",
+    "pat_cagr_3yr",
+    "ebitda_margin_pct",
+    "eps_pre_ipo",
+    "roe_pct",
+    "roce_pct",
+    "debt_equity_ratio",
+    "operating_cash_flow_cr"
+  ],
+  "Valuation": [
+    "pe_ratio",
+    "pb_ratio",
+    "industry_pe",
+    "valuation_discount_pct"
+  ],
+  "Market": [
+    "nifty_1d_return",
+    "nifty_5d_return",
+    "nifty_20d_return",
+    "sensex_1d_return",
+    "sensex_5d_return",
+    "sensex_20d_return",
+    "india_vix",
+    "india_vix_5d_change",
+    "market_trend"
+  ],
+  "Historical_Demand": [
+    "previous_sector_avg_subscription",
+    "previous_general_avg_subscription"
+  ],
+  "Sentiment": [
+    "gmp_in_inr",
+    "gmp_percentage",
+    "news_count",
+    "average_sentiment_score",
+    "positive_news_ratio",
+    "negative_news_ratio"
+  ],
+  "Categorical_Sector": [
+    "sector"
+  ]
+}

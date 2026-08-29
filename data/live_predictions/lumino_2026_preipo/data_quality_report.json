@@ -1,0 +1,22 @@
+{
+  "company_name": "Lumino Industries Ltd",
+  "evaluated_at": "2026-08-26T16:15:00+05:30",
+  "statutory_feature_cutoff": "2026-08-27T09:59:59+05:30",
+  "total_features": 45,
+  "available_features": 45,
+  "missing_features": 0,
+  "missing_feature_list": [],
+  "temporal_rejections_count": 0,
+  "source_count": 6,
+  "completeness_percentage": 100.0,
+  "data_quality_score": 100,
+  "quality_tier": "EXCELLENT",
+  "audit_details": {
+    "structure_features_valid": true,
+    "fundamentals_audited": true,
+    "valuation_verified": true,
+    "market_indices_eod_verified": true,
+    "sentiment_finbert_calculated": true,
+    "historical_past_only_enforced": true
+  }
+}

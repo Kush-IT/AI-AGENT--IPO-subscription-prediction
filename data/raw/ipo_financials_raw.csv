@@ -1,0 +1,107 @@
+ipo_id,company_name,financial_period,financial_publication_date,revenue_latest_cr,revenue_cagr_3yr,pat_latest_cr,pat_cagr_3yr,ebitda_margin_pct,eps_pre_ipo,roe_pct,roce_pct,debt_equity_ratio,operating_cash_flow_cr,source,source_url
+IPO_2021_001,Indian Railway Finance Corp (IRFC),FY_PRE_IPO_AUDITED,2021-01-13,13421.09,19.8,3192.1,22.4,98.2,2.7,11.6,9.4,8.52,-12450.0,SRC_SEBI_01,https://www.sebi.gov.in/filings/public-issues.html
+IPO_2021_002,Indigo Paints Ltd,FY_PRE_IPO_AUDITED,2021-01-15,624.79,24.8,47.81,98.5,14.6,10.58,24.5,26.8,0.22,45.2,SRC_SEBI_01,https://www.sebi.gov.in/filings/public-issues.html
+IPO_2021_003,Home First Finance Co India Ltd,FY_PRE_IPO_AUDITED,2021-01-18,419.7,48.5,79.55,45.2,62.4,10.22,10.9,11.2,2.65,-410.0,SRC_SEBI_01,https://www.sebi.gov.in/filings/public-issues.html
+IPO_2021_004,Stove Kraft Ltd,FY_PRE_IPO_AUDITED,2021-01-21,669.94,12.4,3.16,115.0,5.4,1.25,7.8,14.5,4.12,32.5,SRC_SEBI_01,https://www.sebi.gov.in/filings/public-issues.html
+IPO_2021_005,Nureca Ltd,FY_PRE_IPO_AUDITED,2021-02-10,122.98,85.2,36.18,142.0,38.5,36.18,48.5,52.4,0.05,28.5,SRC_SEBI_01,https://www.sebi.gov.in/filings/public-issues.html
+IPO_2021_006,RailTel Corp of India Ltd,FY_PRE_IPO_AUDITED,2021-02-11,1166.01,12.8,141.07,7.4,31.4,4.4,10.5,14.8,0.0,210.0,SRC_SEBI_01,https://www.sebi.gov.in/filings/public-issues.html
+IPO_2021_007,Heranba Industries Ltd,FY_PRE_IPO_AUDITED,2021-02-18,967.91,16.4,97.75,44.5,14.8,25.04,30.5,34.2,0.35,78.5,SRC_SEBI_01,https://www.sebi.gov.in/filings/public-issues.html
+IPO_2021_008,MTAR Technologies Ltd,FY_PRE_IPO_AUDITED,2021-02-24,218.14,16.8,31.32,140.2,28.5,11.08,14.8,19.5,0.42,42.1,SRC_SEBI_01,https://www.sebi.gov.in/filings/public-issues.html
+IPO_2021_009,Easy Trip Planners Ltd,FY_PRE_IPO_AUDITED,2021-03-01,150.14,28.4,33.07,125.0,34.2,3.04,38.5,45.2,0.0,35.8,SRC_SEBI_01,https://www.sebi.gov.in/filings/public-issues.html
+IPO_2021_010,Anupam Rasayan India Ltd,FY_PRE_IPO_AUDITED,2021-03-08,539.39,24.2,52.98,35.8,24.8,5.92,9.4,12.8,0.95,110.5,SRC_SEBI_01,https://www.sebi.gov.in/filings/public-issues.html
+IPO_2021_011,Laxmi Organic Industries Ltd,FY_PRE_IPO_AUDITED,2021-03-09,1538.6,7.8,70.22,-1.4,8.9,3.08,14.8,16.5,0.45,95.4,SRC_SEBI_01,https://www.sebi.gov.in/filings/public-issues.html
+IPO_2021_012,Craftsman Automation Ltd,FY_PRE_IPO_AUDITED,2021-03-10,1492.54,5.4,36.72,-15.4,26.5,18.25,4.8,8.5,1.45,280.0,SRC_SEBI_01,https://www.sebi.gov.in/filings/public-issues.html
+IPO_2021_013,Nazara Technologies Ltd,FY_PRE_IPO_AUDITED,2021-03-12,262.1,35.8,-26.61,-45.2,6.8,-9.25,-4.8,2.4,0.02,18.5,SRC_SEBI_01,https://www.sebi.gov.in/filings/public-issues.html
+IPO_2021_014,Kalyan Jewellers India Ltd,FY_PRE_IPO_AUDITED,2021-03-11,10100.92,-1.2,142.27,2.8,7.6,1.62,6.8,10.5,1.45,380.0,SRC_SEBI_01,https://www.sebi.gov.in/filings/public-issues.html
+IPO_2021_015,Barbeque Nation Hospitality Ltd,FY_PRE_IPO_AUDITED,2021-03-19,850.78,19.5,-32.93,-22.5,19.2,-9.85,-34.8,8.5,4.85,135.0,SRC_SEBI_01,https://www.sebi.gov.in/filings/public-issues.html
+IPO_2021_016,Macrotech Developers Ltd (Lodha),FY_PRE_IPO_AUDITED,2021-04-01,12442.6,-4.2,728.0,-35.2,28.5,18.4,15.2,14.8,3.85,2150.0,SRC_SEBI_01,https://www.sebi.gov.in/filings/public-issues.html
+IPO_2021_017,Shyam Metalics and Energy Ltd,FY_PRE_IPO_AUDITED,2021-06-08,4488.75,18.5,340.33,22.4,17.5,14.55,18.4,21.2,0.28,485.0,SRC_SEBI_01,https://www.sebi.gov.in/filings/public-issues.html
+IPO_2021_018,Sona BLW Precision Forgings Ltd,FY_PRE_IPO_AUDITED,2021-06-09,1566.3,28.5,215.16,34.2,27.8,3.8,18.5,19.8,0.42,280.0,SRC_SEBI_01,https://www.sebi.gov.in/filings/public-issues.html
+IPO_2021_019,Krishna Institute of Med Sciences,FY_PRE_IPO_AUDITED,2021-06-10,1340.1,22.4,205.49,92.5,27.4,26.55,28.5,24.8,0.38,285.0,SRC_SEBI_01,https://www.sebi.gov.in/filings/public-issues.html
+IPO_2021_020,Dodla Dairy Ltd,FY_PRE_IPO_AUDITED,2021-06-10,2139.37,14.5,125.97,85.4,13.5,22.4,24.5,28.4,0.15,145.0,SRC_SEBI_01,https://www.sebi.gov.in/filings/public-issues.html
+IPO_2021_021,Clean Science and Technology Ltd,FY_PRE_IPO_AUDITED,2021-07-01,538.07,28.5,198.38,45.2,50.5,18.68,36.8,49.5,0.0,185.0,SRC_SEBI_01,https://www.sebi.gov.in/filings/public-issues.html
+IPO_2021_022,G.R. Infraprojects Ltd,FY_PRE_IPO_AUDITED,2021-07-01,7907.03,22.8,953.22,18.5,18.2,98.5,26.5,28.2,0.85,820.0,SRC_SEBI_01,https://www.sebi.gov.in/filings/public-issues.html
+IPO_2021_023,Zomato Limited,FY_PRE_IPO_AUDITED,2021-07-06,1993.79,43.2,-816.43,-18.5,-34.8,-1.51,-14.2,-12.5,0.0,-420.0,SRC_SEBI_01,https://www.sebi.gov.in/filings/public-issues.html
+IPO_2021_024,Tatva Chintan Pharma Chem Ltd,FY_PRE_IPO_AUDITED,2021-07-12,300.36,21.4,52.29,59.8,23.5,25.1,31.5,33.4,0.58,45.2,SRC_SEBI_01,https://www.sebi.gov.in/filings/public-issues.html
+IPO_2021_025,Glenmark Life Sciences Ltd,FY_PRE_IPO_AUDITED,2021-07-22,1885.98,16.5,351.58,34.2,31.4,32.55,46.8,42.5,0.0,290.0,SRC_SEBI_01,https://www.sebi.gov.in/filings/public-issues.html
+IPO_2021_026,Rolex Rings Ltd,FY_PRE_IPO_AUDITED,2021-07-23,619.76,-12.4,86.95,28.5,22.8,34.25,24.8,21.5,0.58,95.0,SRC_SEBI_01,https://www.sebi.gov.in/filings/public-issues.html
+IPO_2021_027,Devyani International Ltd,FY_PRE_IPO_AUDITED,2021-07-29,1134.84,-10.5,-55.2,-18.2,18.5,-0.68,-8.5,4.5,0.85,220.0,SRC_SEBI_01,https://www.sebi.gov.in/filings/public-issues.html
+IPO_2021_028,Aptus Value Housing Finance,FY_PRE_IPO_AUDITED,2021-08-05,655.24,41.5,266.94,54.2,74.5,5.85,14.5,13.8,1.25,-350.0,SRC_SEBI_01,https://www.sebi.gov.in/filings/public-issues.html
+IPO_2021_029,Ami Organics Ltd,FY_PRE_IPO_AUDITED,2021-08-25,340.61,20.5,54.0,48.5,24.5,17.15,32.5,34.8,0.58,45.2,SRC_SEBI_01,https://www.sebi.gov.in/filings/public-issues.html
+IPO_2021_030,Paras Defence & Space Tech,FY_PRE_IPO_AUDITED,2021-09-15,143.33,-1.2,15.78,-22.4,30.2,5.55,10.5,12.8,0.65,22.5,SRC_SEBI_01,https://www.sebi.gov.in/filings/public-issues.html
+IPO_2021_031,FSN E-Commerce Ventures (Nykaa),FY_PRE_IPO_AUDITED,2021-10-22,2440.89,48.2,61.95,110.5,6.6,1.34,12.5,14.8,0.45,145.2,SRC_SEBI_01,https://www.sebi.gov.in/filings/public-issues.html
+IPO_2021_032,One97 Communications (Paytm),FY_PRE_IPO_AUDITED,2021-10-28,2802.1,12.5,-1701.0,-28.4,-58.2,-28.5,-22.5,-18.4,0.12,-920.0,SRC_SEBI_01,https://www.sebi.gov.in/filings/public-issues.html
+IPO_2021_033,Latent View Analytics Ltd,FY_PRE_IPO_AUDITED,2021-11-03,305.88,2.8,91.46,24.5,34.5,5.18,20.8,24.5,0.0,85.0,SRC_SEBI_01,https://www.sebi.gov.in/filings/public-issues.html
+IPO_2021_034,Data Patterns (India) Ltd,FY_PRE_IPO_AUDITED,2021-12-09,224.22,34.5,55.57,125.0,42.1,11.23,26.8,32.4,0.15,48.0,SRC_SEBI_01,https://www.sebi.gov.in/filings/public-issues.html
+IPO_2022_001,AGS Transact Technologies Ltd,FY_PRE_IPO_AUDITED,2022-01-14,1797.15,-0.8,-54.72,-35.2,23.5,-4.55,-8.5,6.5,1.85,240.0,SRC_SEBI_01,https://www.sebi.gov.in/filings/public-issues.html
+IPO_2022_002,Adani Wilmar Ltd,FY_PRE_IPO_AUDITED,2022-01-21,37195.65,14.5,727.65,38.5,4.2,6.25,18.5,21.2,0.85,850.0,SRC_SEBI_01,https://www.sebi.gov.in/filings/public-issues.html
+IPO_2022_003,Vedant Fashions Ltd (Manyavar),FY_PRE_IPO_AUDITED,2022-01-28,564.82,-28.5,132.9,-42.5,48.5,5.5,14.5,16.8,0.15,185.0,SRC_SEBI_01,https://www.sebi.gov.in/filings/public-issues.html
+IPO_2022_004,Campus Activewear Ltd,FY_PRE_IPO_AUDITED,2022-04-20,715.08,14.2,26.86,38.4,16.5,3.42,19.8,22.4,0.78,85.0,SRC_SEBI_01,https://www.sebi.gov.in/filings/public-issues.html
+IPO_2022_005,Rainbow Children's Medicare,FY_PRE_IPO_AUDITED,2022-04-21,650.05,18.5,39.57,-12.4,34.5,4.3,8.5,11.2,0.12,145.0,SRC_SEBI_01,https://www.sebi.gov.in/filings/public-issues.html
+IPO_2022_006,LIC of India,FY_PRE_IPO_AUDITED,2022-04-26,616429.0,8.5,2974.14,12.4,4.5,4.7,45.2,48.5,0.0,18500.0,SRC_SEBI_01,https://www.sebi.gov.in/filings/public-issues.html
+IPO_2022_007,Prudent Corporate Advisory,FY_PRE_IPO_AUDITED,2022-05-05,286.51,18.5,45.3,42.5,24.8,10.95,32.5,34.8,0.0,38.5,SRC_SEBI_01,https://www.sebi.gov.in/filings/public-issues.html
+IPO_2022_008,Venus Pipes & Tubes Ltd,FY_PRE_IPO_AUDITED,2022-05-06,312.03,42.5,23.63,145.0,14.8,16.5,38.5,32.4,0.65,18.5,SRC_SEBI_01,https://www.sebi.gov.in/filings/public-issues.html
+IPO_2022_009,Delhivery Ltd,FY_PRE_IPO_AUDITED,2022-05-06,3646.5,42.8,-415.7,-18.2,-6.8,-6.2,-14.5,-8.5,0.12,110.0,SRC_SEBI_01,https://www.sebi.gov.in/filings/public-issues.html
+IPO_2022_010,Aether Industries Ltd,FY_PRE_IPO_AUDITED,2022-05-19,449.82,48.5,71.12,75.4,28.5,7.15,28.5,26.4,0.45,65.0,SRC_SEBI_01,https://www.sebi.gov.in/filings/public-issues.html
+IPO_2022_011,Syrma SGS Technology Ltd,FY_PRE_IPO_AUDITED,2022-08-08,1266.65,24.5,76.46,28.5,10.2,5.85,14.5,16.8,0.38,95.0,SRC_SEBI_01,https://www.sebi.gov.in/filings/public-issues.html
+IPO_2022_012,Dreamfolks Services Ltd,FY_PRE_IPO_AUDITED,2022-08-19,282.5,14.2,16.25,-28.5,8.4,3.12,22.4,28.5,0.0,24.5,SRC_SEBI_01,https://www.sebi.gov.in/filings/public-issues.html
+IPO_2022_013,Harsha Engineers Intl Ltd,FY_PRE_IPO_AUDITED,2022-09-08,1321.48,22.5,91.94,48.5,14.2,11.85,18.5,20.8,0.52,110.0,SRC_SEBI_01,https://www.sebi.gov.in/filings/public-issues.html
+IPO_2022_014,Electronics Mart India Ltd,FY_PRE_IPO_AUDITED,2022-09-28,4349.32,18.5,103.89,74.2,6.8,3.45,16.5,18.4,0.85,145.0,SRC_SEBI_01,https://www.sebi.gov.in/filings/public-issues.html
+IPO_2022_015,DCX Systems Ltd,FY_PRE_IPO_AUDITED,2022-10-27,1102.27,45.2,65.61,85.0,6.2,8.45,52.4,24.5,2.85,-120.0,SRC_SEBI_01,https://www.sebi.gov.in/filings/public-issues.html
+IPO_2022_016,Global Health Ltd (Medanta),FY_PRE_IPO_AUDITED,2022-10-28,2166.58,21.5,196.2,142.0,22.4,8.1,12.5,15.8,0.45,380.0,SRC_SEBI_01,https://www.sebi.gov.in/filings/public-issues.html
+IPO_2022_017,Bikaji Foods International Ltd,FY_PRE_IPO_AUDITED,2022-10-28,1610.96,22.4,76.03,18.5,8.9,3.25,11.2,14.5,0.25,110.0,SRC_SEBI_01,https://www.sebi.gov.in/filings/public-issues.html
+IPO_2022_018,Kaynes Technology India Ltd,FY_PRE_IPO_AUDITED,2022-11-04,706.25,28.5,41.68,65.2,13.5,9.15,20.5,22.8,0.72,45.0,SRC_SEBI_01,https://www.sebi.gov.in/filings/public-issues.html
+IPO_2022_019,Five-Star Business Finance Ltd,FY_PRE_IPO_AUDITED,2022-11-04,1256.16,32.5,453.54,45.2,78.5,15.54,15.8,14.5,1.85,-280.0,SRC_SEBI_01,https://www.sebi.gov.in/filings/public-issues.html
+IPO_2022_020,Archean Chemical Industries,FY_PRE_IPO_AUDITED,2022-11-04,1130.43,48.5,188.58,110.5,41.2,19.45,38.5,32.4,0.85,340.0,SRC_SEBI_01,https://www.sebi.gov.in/filings/public-issues.html
+IPO_2022_021,Sula Vineyards Ltd,FY_PRE_IPO_AUDITED,2022-12-07,453.92,-4.5,52.14,142.0,25.4,6.55,14.8,16.5,0.65,85.0,SRC_SEBI_01,https://www.sebi.gov.in/filings/public-issues.html
+IPO_2022_022,KFin Technologies Ltd,FY_PRE_IPO_AUDITED,2022-12-14,639.51,14.2,148.55,125.0,44.5,8.85,24.5,22.8,0.25,185.0,SRC_SEBI_01,https://www.sebi.gov.in/filings/public-issues.html
+IPO_2022_023,Landmark Cars Ltd,FY_PRE_IPO_AUDITED,2022-12-08,2976.54,18.5,66.18,125.0,6.8,17.5,28.5,21.4,1.45,120.0,SRC_SEBI_01,https://www.sebi.gov.in/filings/public-issues.html
+IPO_2022_024,Elin Electronics Ltd,FY_PRE_IPO_AUDITED,2022-12-15,1093.75,16.5,39.15,28.5,7.8,8.25,14.5,16.8,0.85,45.0,SRC_SEBI_01,https://www.sebi.gov.in/filings/public-issues.html
+IPO_2023_001,Mankind Pharma Ltd,FY_PRE_IPO_AUDITED,2023-04-19,7781.56,15.8,1452.96,22.4,26.8,36.27,24.8,28.5,0.12,1250.0,SRC_SEBI_01,https://www.sebi.gov.in/filings/public-issues.html
+IPO_2023_002,IdeaForge Technology Ltd,FY_PRE_IPO_AUDITED,2023-06-21,186.01,85.4,31.99,140.2,31.2,10.15,18.5,22.4,0.18,25.0,SRC_SEBI_01,https://www.sebi.gov.in/filings/public-issues.html
+IPO_2023_003,Cyient DLM Ltd,FY_PRE_IPO_AUDITED,2023-06-22,832.03,18.5,31.73,54.2,10.5,5.8,16.5,18.2,0.85,45.0,SRC_SEBI_01,https://www.sebi.gov.in/filings/public-issues.html
+IPO_2023_004,Senco Gold Ltd,FY_PRE_IPO_AUDITED,2023-06-28,3534.64,21.5,158.48,38.5,8.4,22.85,18.5,19.8,1.15,110.0,SRC_SEBI_01,https://www.sebi.gov.in/filings/public-issues.html
+IPO_2023_005,Utkarsh Small Finance Bank,FY_PRE_IPO_AUDITED,2023-07-07,2804.29,28.5,404.5,142.0,34.5,4.52,22.8,18.5,0.0,850.0,SRC_SEBI_01,https://www.sebi.gov.in/filings/public-issues.html
+IPO_2023_006,Netweb Technologies India Ltd,FY_PRE_IPO_AUDITED,2023-07-12,444.97,85.0,46.94,110.5,15.8,9.45,48.5,42.5,0.35,38.0,SRC_SEBI_01,https://www.sebi.gov.in/filings/public-issues.html
+IPO_2023_007,Yatharth Hospital & Trauma Care,FY_PRE_IPO_AUDITED,2023-07-21,520.29,45.2,65.77,85.0,25.8,9.15,36.5,32.4,0.72,85.0,SRC_SEBI_01,https://www.sebi.gov.in/filings/public-issues.html
+IPO_2023_008,SBFC Finance Ltd,FY_PRE_IPO_AUDITED,2023-07-28,740.36,38.5,149.74,75.0,48.5,1.85,12.5,11.8,2.85,-450.0,SRC_SEBI_01,https://www.sebi.gov.in/filings/public-issues.html
+IPO_2023_009,Concord Biotech Ltd,FY_PRE_IPO_AUDITED,2023-07-31,853.17,24.5,240.08,38.5,38.5,22.95,20.5,24.8,0.0,210.0,SRC_SEBI_01,https://www.sebi.gov.in/filings/public-issues.html
+IPO_2023_010,Aeroflex Industries Ltd,FY_PRE_IPO_AUDITED,2023-08-17,269.48,34.5,30.15,65.0,19.5,2.65,26.5,28.4,0.45,28.5,SRC_SEBI_01,https://www.sebi.gov.in/filings/public-issues.html
+IPO_2023_011,Vishnu Prakash R Punglia Ltd,FY_PRE_IPO_AUDITED,2023-08-18,1168.4,45.2,90.64,110.5,13.5,10.25,28.5,24.5,0.95,85.0,SRC_SEBI_01,https://www.sebi.gov.in/filings/public-issues.html
+IPO_2023_012,RR Kabel Ltd,FY_PRE_IPO_AUDITED,2023-09-08,5599.2,24.5,189.87,-12.4,7.8,17.55,14.5,16.8,0.38,240.0,SRC_SEBI_01,https://www.sebi.gov.in/filings/public-issues.html
+IPO_2023_013,JSW Infrastructure Ltd,FY_PRE_IPO_AUDITED,2023-09-20,3195.08,24.5,749.51,85.0,50.5,4.25,18.5,16.5,0.85,1450.0,SRC_SEBI_01,https://www.sebi.gov.in/filings/public-issues.html
+IPO_2023_014,Signatureglobal (India) Ltd,FY_PRE_IPO_AUDITED,2023-09-15,1553.79,45.2,-63.72,-18.5,-4.5,-5.2,-12.5,4.5,4.5,420.0,SRC_SEBI_01,https://www.sebi.gov.in/filings/public-issues.html
+IPO_2023_015,Plaza Wires Ltd,FY_PRE_IPO_AUDITED,2023-09-26,182.6,14.5,7.51,28.5,8.4,2.25,14.8,16.5,0.65,12.5,SRC_SEBI_01,https://www.sebi.gov.in/filings/public-issues.html
+IPO_2023_016,Cello World Ltd,FY_PRE_IPO_AUDITED,2023-10-25,1796.69,32.5,285.07,34.5,24.5,13.45,38.5,36.4,0.18,220.0,SRC_SEBI_01,https://www.sebi.gov.in/filings/public-issues.html
+IPO_2023_017,Honasa Consumer (Mamaearth),FY_PRE_IPO_AUDITED,2023-10-26,1492.75,58.5,-151.0,-18.5,2.5,-4.85,-8.5,4.5,0.05,45.0,SRC_SEBI_01,https://www.sebi.gov.in/filings/public-issues.html
+IPO_2023_018,Protean eGov Technologies,FY_PRE_IPO_AUDITED,2023-11-01,742.2,14.5,107.04,22.5,19.5,26.45,14.5,18.2,0.0,95.0,SRC_SEBI_01,https://www.sebi.gov.in/filings/public-issues.html
+IPO_2023_019,ASK Automotive Ltd,FY_PRE_IPO_AUDITED,2023-11-02,2555.15,22.4,122.95,45.2,9.8,6.25,22.4,24.8,0.35,160.0,SRC_SEBI_01,https://www.sebi.gov.in/filings/public-issues.html
+IPO_2023_020,Tata Technologies Ltd,FY_PRE_IPO_AUDITED,2023-11-17,4414.18,25.8,624.03,42.5,23.7,15.38,24.2,28.5,0.05,520.0,SRC_SEBI_01,https://www.sebi.gov.in/filings/public-issues.html
+IPO_2023_021,IREDA Ltd,FY_PRE_IPO_AUDITED,2023-11-16,3483.0,21.4,864.62,38.5,92.5,3.78,15.8,12.4,6.2,-1850.0,SRC_SEBI_01,https://www.sebi.gov.in/filings/public-issues.html
+IPO_2023_022,Gandhar Oil Refinery Ltd,FY_PRE_IPO_AUDITED,2023-11-17,4079.44,34.5,213.17,45.2,10.2,23.45,38.5,36.8,0.35,110.0,SRC_SEBI_01,https://www.sebi.gov.in/filings/public-issues.html
+IPO_2023_023,Flair Writing Industries Ltd,FY_PRE_IPO_AUDITED,2023-11-17,942.71,38.5,118.1,85.0,20.4,11.25,31.5,33.4,0.22,115.0,SRC_SEBI_01,https://www.sebi.gov.in/filings/public-issues.html
+IPO_2023_024,DOMS Industries Ltd,FY_PRE_IPO_AUDITED,2023-12-08,1211.89,48.5,102.87,125.0,15.4,18.05,34.5,36.8,0.28,145.0,SRC_SEBI_01,https://www.sebi.gov.in/filings/public-issues.html
+IPO_2023_025,India Shelter Finance Corp,FY_PRE_IPO_AUDITED,2023-12-08,606.01,38.5,155.34,45.2,72.5,17.45,13.5,14.8,2.45,-280.0,SRC_SEBI_01,https://www.sebi.gov.in/filings/public-issues.html
+IPO_2023_026,INOX India Ltd,FY_PRE_IPO_AUDITED,2023-12-11,965.9,22.4,152.71,38.5,23.5,16.82,28.5,34.2,0.0,165.0,SRC_SEBI_01,https://www.sebi.gov.in/filings/public-issues.html
+IPO_2023_027,Motisons Jewellers Ltd,FY_PRE_IPO_AUDITED,2023-12-14,366.81,18.5,22.19,48.5,10.5,3.25,18.5,16.8,1.25,15.0,SRC_SEBI_01,https://www.sebi.gov.in/filings/public-issues.html
+IPO_2023_028,Azad Engineering Ltd,FY_PRE_IPO_AUDITED,2023-12-15,251.68,32.5,8.47,18.5,31.4,1.7,5.8,14.2,1.85,45.0,SRC_SEBI_01,https://www.sebi.gov.in/filings/public-issues.html
+IPO_2024_001,Jyoti CNC Automation Ltd,FY_PRE_IPO_AUDITED,2024-01-03,929.25,24.5,15.06,110.5,10.5,0.85,7.8,12.4,3.85,65.0,SRC_SEBI_01,https://www.sebi.gov.in/filings/public-issues.html
+IPO_2024_002,Medi Assist Healthcare,FY_PRE_IPO_AUDITED,2024-01-10,504.8,28.5,74.04,45.2,23.5,10.85,19.5,22.4,0.0,95.0,SRC_SEBI_01,https://www.sebi.gov.in/filings/public-issues.html
+IPO_2024_003,BLS E-Services Ltd,FY_PRE_IPO_AUDITED,2024-01-24,243.06,65.0,20.33,145.0,14.5,3.85,28.5,32.4,0.05,22.0,SRC_SEBI_01,https://www.sebi.gov.in/filings/public-issues.html
+IPO_2024_004,Rashi Peripherals Ltd,FY_PRE_IPO_AUDITED,2024-02-01,9454.27,24.5,123.34,18.5,2.8,25.8,18.5,16.5,1.45,185.0,SRC_SEBI_01,https://www.sebi.gov.in/filings/public-issues.html
+IPO_2024_005,Jana Small Finance Bank Ltd,FY_PRE_IPO_AUDITED,2024-02-01,3699.88,28.5,255.97,125.0,32.5,28.5,18.5,16.2,0.0,650.0,SRC_SEBI_01,https://www.sebi.gov.in/filings/public-issues.html
+IPO_2024_006,Exicom Tele-Systems Ltd,FY_PRE_IPO_AUDITED,2024-02-21,707.87,45.2,31.0,125.0,8.5,3.45,14.5,18.5,0.85,35.0,SRC_SEBI_01,https://www.sebi.gov.in/filings/public-issues.html
+IPO_2024_007,Platinum Industries Ltd,FY_PRE_IPO_AUDITED,2024-02-21,231.87,65.0,37.58,145.0,24.5,9.15,38.5,34.8,0.35,28.5,SRC_SEBI_01,https://www.sebi.gov.in/filings/public-issues.html
+IPO_2024_008,Mukka Proteins Ltd,FY_PRE_IPO_AUDITED,2024-02-23,1177.12,38.5,47.52,85.0,6.8,2.1,34.5,24.8,1.65,45.0,SRC_SEBI_01,https://www.sebi.gov.in/filings/public-issues.html
+IPO_2024_009,Bharti Hexacom Ltd,FY_PRE_IPO_AUDITED,2024-03-27,6579.0,18.5,549.2,45.2,49.5,11.0,14.8,16.2,0.72,2850.0,SRC_SEBI_01,https://www.sebi.gov.in/filings/public-issues.html
+IPO_2024_010,JNK India Ltd,FY_PRE_IPO_AUDITED,2024-04-18,407.3,65.0,46.36,125.0,17.5,10.85,45.2,42.5,0.25,45.0,SRC_SEBI_01,https://www.sebi.gov.in/filings/public-issues.html
+IPO_2024_011,Indegene Ltd,FY_PRE_IPO_AUDITED,2024-05-02,2306.1,38.5,266.09,65.0,19.5,12.85,28.5,26.4,0.05,340.0,SRC_SEBI_01,https://www.sebi.gov.in/filings/public-issues.html
+IPO_2024_012,Aadhar Housing Finance Ltd,FY_PRE_IPO_AUDITED,2024-05-03,2043.5,24.5,544.76,38.5,68.5,15.45,15.8,14.5,3.25,-680.0,SRC_SEBI_01,https://www.sebi.gov.in/filings/public-issues.html
+IPO_2024_013,TBO Tek Ltd,FY_PRE_IPO_AUDITED,2024-05-03,1064.59,120.0,148.49,145.0,18.5,14.25,44.5,38.5,0.0,185.0,SRC_SEBI_01,https://www.sebi.gov.in/filings/public-issues.html
+IPO_2024_014,Go Digit General Insurance,FY_PRE_IPO_AUDITED,2024-05-10,5164.0,55.0,35.54,110.5,4.5,0.45,2.5,4.2,0.0,420.0,SRC_SEBI_01,https://www.sebi.gov.in/filings/public-issues.html
+IPO_2024_015,Awfis Space Solutions Ltd,FY_PRE_IPO_AUDITED,2024-05-17,545.28,98.5,-46.64,-22.5,18.5,-8.1,-16.5,8.5,2.45,145.0,SRC_SEBI_01,https://www.sebi.gov.in/filings/public-issues.html
+IPO_2024_016,Kronox Lab Sciences Ltd,FY_PRE_IPO_AUDITED,2024-05-29,95.58,24.5,16.59,32.4,24.5,4.47,37.2,45.8,0.0,14.5,SRC_SEBI_01,https://www.sebi.gov.in/filings/public-issues.html
+IPO_2024_017,DEE Development Engineers,FY_PRE_IPO_AUDITED,2024-06-14,595.54,18.5,12.97,45.2,14.2,2.45,6.8,9.5,0.85,38.0,SRC_SEBI_01,https://www.sebi.gov.in/filings/public-issues.html
+IPO_2024_018,Akme Fintrade India Ltd,FY_PRE_IPO_AUDITED,2024-06-14,69.51,24.5,15.8,38.5,68.5,5.12,12.5,11.8,1.45,-25.0,SRC_SEBI_01,https://www.sebi.gov.in/filings/public-issues.html
+IPO_2024_019,Stanley Lifestyles Ltd,FY_PRE_IPO_AUDITED,2024-06-18,419.0,32.5,34.98,85.0,24.5,7.85,18.5,22.4,0.45,48.0,SRC_SEBI_01,https://www.sebi.gov.in/filings/public-issues.html
+IPO_2024_020,Emcure Pharmaceuticals Ltd,FY_PRE_IPO_AUDITED,2024-06-28,6031.7,16.5,527.58,-12.4,21.4,28.5,24.5,22.8,0.65,780.0,SRC_SEBI_01,https://www.sebi.gov.in/filings/public-issues.html

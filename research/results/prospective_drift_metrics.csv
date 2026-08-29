@@ -1,0 +1,9 @@
+feature_name,psi_score,drift_level,historical_mean,prospective_mean
+gmp_percentage,9.5954,HIGH,40.21,40.85
+issue_size_in_crore,7.0619,HIGH,1676.94,724.32
+pe_ratio,0.0,LOW,154.69,12.48
+india_vix,0.0,LOW,15.98,10.48
+average_sentiment_score,0.0,LOW,0.76,0.65
+revenue_latest_cr,0.0,LOW,8047.74,2089.31
+revenue_cagr_3yr,0.0,LOW,28.51,21.1
+price_band_spread_pct,0.0,LOW,4.26,5.13

@@ -1,0 +1,21 @@
+{
+  "analysis_timestamp": "2026-08-27T12:26:13.076558+00:00",
+  "software_version": "1.0.0",
+  "python_version": "3.14.7",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "feature_schema_version": "v2_45_features",
+  "prospective_sample_size_n": 1,
+  "evidence_level": "INITIAL_CASE_STUDY",
+  "dataset_hash": "ce21fb26091fe87a47da60cd06de46e7ad638963f1613fd9d4ca15f139fcccfe",
+  "synthetic_observations": 0,
+  "prediction_records_count": 1,
+  "outcome_records_count": 1,
+  "model_hashes": {
+    "dev_preprocessor.joblib": "04bd6412a6dc3113f28ba117866e8e4a6d3de0dc8ee3c5f43b5a58432cc14d57",
+    "total_xgboost_log1p.joblib": "3b00118e9e12cddd7f5f4ce59d5b6fef4211826efaffa03a36af5ed845550cc6",
+    "qib_random_forest_raw.joblib": "29188a7909eb069a8185ec23f1b8b4f9e4a784be723b6fe81e79ed7f8c3a79d5",
+    "nii_lightgbm_log1p.joblib": "618ef8351e54953b60063339910ac0638de28dad2f1368058895f690353d3c29",
+    "retail_xgboost_raw.joblib": "835ceb1face5831889fd55a5774e02289ae3a2f6fd4085331f0f555bb5f9b7ab"
+  },
+  "reproducibility_status": "DETERMINISTIC_VERIFIED"
+}

@@ -1,0 +1,16 @@
+{
+  "prediction_id": "308e97b4-45c7-4605-a00c-f60798dc19d9",
+  "company_name": "Lumino Industries Ltd",
+  "ipo_close_date": "2026-08-31",
+  "outcome_source": "National Stock Exchange of India (NSE)",
+  "outcome_source_url": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo/lumino-bid-details",
+  "outcome_observed_at": "2026-08-31T18:00:00+05:30",
+  "retrieved_at": "2026-08-31T18:05:00+05:30",
+  "actual_subscriptions": {
+    "total_subscription": 51.34,
+    "qib_subscription": 118.42,
+    "nii_subscription": 62.15,
+    "retail_subscription": 16.85
+  },
+  "outcome_validation_status": "VERIFIED_EXCHANGE_OUTCOME"
+}

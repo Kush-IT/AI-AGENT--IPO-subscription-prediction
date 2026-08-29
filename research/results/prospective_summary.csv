@@ -1,0 +1,2 @@
+prospective_sample_size_n,evidence_level,total_mae,total_mape_pct,qib_mae,nii_mae,retail_mae,category_accuracy_pct,bootstrap_ci_status,hypothesis_testing_status,feature_drift_level,model_status,synthetic_observations_count,evaluation_timestamp
+1,INITIAL_CASE_STUDY,2.14,4.1683,4.91,4.07,0.34,100.0,INSUFFICIENT_SAMPLE_SIZE,INSUFFICIENT_SAMPLE_SIZE,HIGH,MODEL_REVIEW_REQUIRED,0,2026-08-27T12:26:13.076558+00:00

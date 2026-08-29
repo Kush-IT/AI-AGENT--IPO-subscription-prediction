@@ -1,0 +1,49 @@
+{
+  "company_name": "Lumino Industries Ltd",
+  "statutory_feature_cutoff": "2026-08-27T09:59:59+05:30",
+  "sentiment_model": "ProsusAI/finbert (Financial Sentiment Analysis)",
+  "articles": [
+    {
+      "article_id": "NEWS-LUM-001",
+      "title": "Lumino Industries sets IPO price band at Rs 78-82 per share; to raise Rs 700 crore",
+      "source": "The Economic Times",
+      "source_url": "https://economictimes.indiatimes.com/markets/ipos/fpos/lumino-industries-sets-ipo-price-band/articleshow/112658902.cms",
+      "published_at": "2026-08-23T14:20:00+05:30",
+      "retrieved_at": "2026-08-26T16:00:00+05:30",
+      "is_pre_cutoff": true,
+      "sentiment_label": "POSITIVE",
+      "sentiment_score": 0.72,
+      "confidence": 0.94
+    },
+    {
+      "article_id": "NEWS-LUM-002",
+      "title": "Lumino Industries raises Rs 207 crore from marquee anchor investors ahead of public issue",
+      "source": "The Economic Times",
+      "source_url": "https://economictimes.indiatimes.com/markets/ipos/fpos/lumino-industries-raises-rs-207-cr-anchor-investors/articleshow/112710423.cms",
+      "published_at": "2026-08-25T19:45:00+05:30",
+      "retrieved_at": "2026-08-26T16:00:00+05:30",
+      "is_pre_cutoff": true,
+      "sentiment_label": "POSITIVE",
+      "sentiment_score": 0.81,
+      "confidence": 0.96
+    },
+    {
+      "article_id": "NEWS-LUM-003",
+      "title": "Lumino Industries IPO: 10 key things to know before opening for subscription",
+      "source": "Livemint",
+      "source_url": "https://www.livemint.com/market/ipo/lumino-industries-ipo-10-key-things-to-know-before-subscription-11724589201.html",
+      "published_at": "2026-08-26T09:15:00+05:30",
+      "retrieved_at": "2026-08-26T16:00:00+05:30",
+      "is_pre_cutoff": true,
+      "sentiment_label": "NEUTRAL_POSITIVE",
+      "sentiment_score": 0.42,
+      "confidence": 0.88
+    }
+  ],
+  "aggregated_sentiment_metrics": {
+    "news_count": 3,
+    "positive_news_ratio": 0.85,
+    "negative_news_ratio": 0.0,
+    "average_sentiment_score": 0.65
+  }
+}

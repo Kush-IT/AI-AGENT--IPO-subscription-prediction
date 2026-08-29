@@ -1,0 +1,11 @@
+feature_name,source_features,transformation,feature_type,temporal_rule,leakage_risk,description
+issue_size_log,issue_size_in_crore,np.log1p(issue_size_in_crore),NUMERICAL,RHP Filing Ex-Ante,ZERO,Dampens extreme skewness in issue size
+fresh_issue_percentage,"fresh_issue_in_crore, issue_size_in_crore",fresh / total * 100,NUMERICAL,RHP Filing Ex-Ante,ZERO,Measures capital for growth vs promoter exit
+ofs_percentage,"ofs_in_crore, issue_size_in_crore",ofs / total * 100,NUMERICAL,RHP Filing Ex-Ante,ZERO,Proportion of existing shareholder cash-out
+price_band_spread_pct,"price_high, price_low",(ph - pl) / pl * 100,NUMERICAL,RHP Filing Ex-Ante,ZERO,Bidding range flexibility indicator
+min_retail_application_amount,"lot_size, price_high",lot_size * price_high,NUMERICAL,RHP Filing Ex-Ante,ZERO,Minimum ticket size for individual retail bidder
+valuation_discount_pct,"pe_ratio, industry_pe",(industry_pe - pe) / industry_pe * 100,NUMERICAL,Pre-IPO Day Cutoff,ZERO,Relative valuation attractiveness vs listed peers
+previous_general_avg_subscription,total_subscription (past IPOs only),Expanding mean (open_date < current),NUMERICAL,Strictly Prior Historical IPOs,ZERO,Macro historical subscription climate baseline
+previous_sector_avg_subscription,"total_subscription, sector (past)",Expanding mean per sector (open_date < current),NUMERICAL,Strictly Prior Historical IPOs,ZERO,Sector-specific historical subscription climate
+negative_news_ratio,positive_news_ratio,1.0 - positive_news_ratio,NUMERICAL,Pre-IPO Headline Window,ZERO,Negative media coverage ratio
+gmp_percentage,"gmp_in_inr, price_high",gmp / price_high * 100,NUMERICAL,T-1 Grey Market Rate,ZERO,Percentage expected listing premium

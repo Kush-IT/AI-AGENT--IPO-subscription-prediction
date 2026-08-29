@@ -1,0 +1,15 @@
+{
+  "company_name": "Lumino Industries Ltd",
+  "evaluated_at": "2026-08-26T10:52:06.597319+00:00",
+  "statutory_feature_cutoff": "2026-08-27T09:59:59+05:30",
+  "total_features": 45,
+  "available_features": 45,
+  "missing_features": 0,
+  "missing_feature_list": [],
+  "completeness_percentage": 100.0,
+  "temporal_rejections_count": 0,
+  "source_count": 6,
+  "data_quality_score": 100,
+  "quality_tier": "EXCELLENT",
+  "status": "VALID_FOR_PREDICTION"
+}

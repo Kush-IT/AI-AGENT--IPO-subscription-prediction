@@ -1,0 +1,63 @@
+feature_name,feature_classification,description,data_type
+ipo_id,IDENTIFIER,Unique identifier for IPO observation,Alphanumeric
+company_name,IDENTIFIER,Official registered entity name,String
+isin,IDENTIFIER,International Securities Identification Number,ISIN Code
+announcement_date,DATE_TIME,Official date of public announcement,YYYY-MM-DD
+anchor_date,DATE_TIME,Date of anchor investor allocation bidding,YYYY-MM-DD
+ipo_open_date,DATE_TIME,Opening date for public subscription,YYYY-MM-DD
+ipo_close_date,DATE_TIME,Closing date for public subscription,YYYY-MM-DD
+allotment_date,DATE_TIME,Basis of allotment finalization date,YYYY-MM-DD
+listing_date,DATE_TIME,Stock exchange trading listing date,YYYY-MM-DD
+feature_cutoff_datetime,DATE_TIME,Strict ex-ante timestamp limit (09:59:59 IST),ISO 8601
+sector,CATEGORICAL,Macro economic industry sector classification,String (11 sectors)
+industry,CATEGORICAL,Granular sub-industry categorization,String
+exchange,CATEGORICAL,Listing exchange platform (NSE/BSE),String
+ipo_type,CATEGORICAL,Market board tier (MAINBOARD),String
+market_trend,CATEGORICAL,Macro trend state preceding offer opening,String (BULLISH/NEUTRAL/BEARISH)
+issue_size_in_crore,NUMERICAL,Total offering size in INR Crore,Float64
+issue_size_log,NUMERICAL,Natural log of total offering size,Float64
+fresh_issue_percentage,NUMERICAL,Proportion of fresh capital raised (%),Float64
+ofs_percentage,NUMERICAL,Proportion of Offer for Sale shares (%),Float64
+price_low,NUMERICAL,Lower floor price in INR,Float64
+price_high,NUMERICAL,Upper cap price in INR,Float64
+price_band_spread_pct,NUMERICAL,Price band spread width (%),Float64
+lot_size,NUMERICAL,Minimum bid lot quantity in shares,Int64
+min_retail_application_amount,NUMERICAL,Minimum INR required for single retail lot,Float64
+face_value,NUMERICAL,Nominal equity face value per share (INR),Float64
+qib_quota_pct,NUMERICAL,Institutional investor reserved quota percentage,Float64
+nii_quota_pct,NUMERICAL,Non-institutional high net-worth quota percentage,Float64
+retail_quota_pct,NUMERICAL,Individual retail investor quota percentage,Float64
+revenue_latest_cr,NUMERICAL,Pre-IPO FY total revenue in INR Crore,Float64
+revenue_cagr_3yr,NUMERICAL,3-Year compound annual revenue growth rate (%),Float64
+pat_latest_cr,NUMERICAL,Pre-IPO FY profit after tax in INR Crore,Float64
+pat_cagr_3yr,NUMERICAL,3-Year compound annual PAT growth rate (%),Float64
+ebitda_margin_pct,NUMERICAL,Operating EBITDA margin percentage (%),Float64
+eps_pre_ipo,NUMERICAL,Diluted pre-IPO Earnings Per Share in INR,Float64
+roe_pct,NUMERICAL,Return on Equity percentage (%),Float64
+roce_pct,NUMERICAL,Return on Capital Employed percentage (%),Float64
+debt_equity_ratio,NUMERICAL,Total debt to net worth leverage multiple,Float64
+operating_cash_flow_cr,NUMERICAL,Net cash flow from operations in INR Crore,Float64
+pe_ratio,NUMERICAL,Price to Earnings valuation multiple at upper price,Float64
+pb_ratio,NUMERICAL,Price to Book value multiple at upper price,Float64
+industry_pe,NUMERICAL,Listed industry peer weighted average P/E,Float64
+valuation_discount_pct,NUMERICAL,P/E discount/premium vs industry peer benchmark (%),Float64
+nifty_1d_return,NUMERICAL,NIFTY 50 1-day benchmark return before open (%),Float64
+nifty_5d_return,NUMERICAL,NIFTY 50 5-day cumulative return before open (%),Float64
+nifty_20d_return,NUMERICAL,NIFTY 50 20-day cumulative return before open (%),Float64
+sensex_1d_return,NUMERICAL,SENSEX 1-day benchmark return before open (%),Float64
+sensex_5d_return,NUMERICAL,SENSEX 5-day cumulative return before open (%),Float64
+sensex_20d_return,NUMERICAL,SENSEX 20-day cumulative return before open (%),Float64
+india_vix,NUMERICAL,India Volatility Index spot level at opening,Float64
+india_vix_5d_change,NUMERICAL,5-day change in India VIX index points,Float64
+previous_sector_avg_subscription,NUMERICAL,Expanding mean subscription of prior sector IPOs (times),Float64
+previous_general_avg_subscription,NUMERICAL,Expanding mean subscription of all prior IPOs (times),Float64
+gmp_in_inr,NUMERICAL,Unofficial Grey Market Premium in INR,Float64
+gmp_percentage,NUMERICAL,Grey Market Premium relative to issue price cap (%),Float64
+news_count,NUMERICAL,Ex-ante pre-IPO media headline article count,Int64
+average_sentiment_score,NUMERICAL,FinBERT pre-IPO media headline polarity score,Float64
+positive_news_ratio,NUMERICAL,Fraction of positive sentiment media headlines,Float64
+negative_news_ratio,NUMERICAL,Fraction of negative sentiment media headlines,Float64
+qib_subscription,TARGET,Qualified Institutional Buyer subscription multiple,Float64
+nii_subscription,TARGET,Non-Institutional Investor subscription multiple,Float64
+retail_subscription,TARGET,Retail Individual Investor subscription multiple,Float64
+total_subscription,TARGET,Aggregate offer oversubscription multiple (times),Float64

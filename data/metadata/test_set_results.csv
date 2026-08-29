@@ -1,0 +1,5 @@
+target,selected_model,target_transform,val_walk_forward_MAE,test_MAE,test_RMSE,test_MedianAE,test_R2,degradation_ratio,mean_error,median_error,underpredictions_count,overpredictions_count
+qib_subscription,Random_Forest,raw,27.6013,31.4304,38.4757,28.044,0.5892,1.1387,1.4438,-8.7991,7,10
+nii_subscription,LightGBM,log1p,34.0057,39.625,64.4362,18.5386,0.3845,1.1652,29.1753,12.8629,11,6
+retail_subscription,XGBoost,raw,20.3296,23.1409,36.711,9.4099,-0.4498,1.1383,-14.2205,-4.4427,4,13
+total_subscription,XGBoost,log1p,14.5585,17.4305,22.9231,14.8432,0.6661,1.1973,12.7964,8.0084,14,3

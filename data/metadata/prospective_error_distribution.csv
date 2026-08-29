@@ -1,0 +1,2 @@
+prediction_id,company_name,sector,issue_size_cr,gmp_pct,india_vix,market_trend,confidence_level,risk_level,total_ae,qib_ae,nii_ae,retail_ae
+308e97b4-45c7-4605-a00c-f60798dc19d9,Lumino Industries Ltd,Capital Goods,700.0,56.1,10.48,NEUTRAL,HIGH,LOW,2.14,4.91,4.07,0.34

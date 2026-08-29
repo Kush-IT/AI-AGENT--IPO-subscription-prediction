@@ -1,0 +1,107 @@
+ipo_id,company_name,qib_subscription,nii_subscription,retail_subscription,employee_subscription,total_subscription,source,source_url
+IPO_2021_001,Indian Railway Finance Corp (IRFC),3.78,2.67,3.66,0.0,3.49,SRC_BSE_01,https://www.bseindia.com/publicissue.html
+IPO_2021_002,Indigo Paints Ltd,189.57,263.05,15.92,0.0,117.02,SRC_BSE_01,https://www.bseindia.com/publicissue.html
+IPO_2021_003,Home First Finance Co India Ltd,52.53,39.0,6.59,0.0,26.65,SRC_BSE_01,https://www.bseindia.com/publicissue.html
+IPO_2021_004,Stove Kraft Ltd,8.02,32.72,26.03,0.0,18.03,SRC_BSE_01,https://www.bseindia.com/publicissue.html
+IPO_2021_005,Nureca Ltd,3.1,31.59,166.65,0.0,39.93,SRC_BSE_01,https://www.bseindia.com/publicissue.html
+IPO_2021_006,RailTel Corp of India Ltd,65.14,71.25,16.78,0.0,42.39,SRC_BSE_01,https://www.bseindia.com/publicissue.html
+IPO_2021_007,Heranba Industries Ltd,67.45,271.15,11.84,0.0,83.29,SRC_BSE_01,https://www.bseindia.com/publicissue.html
+IPO_2021_008,MTAR Technologies Ltd,164.99,650.79,28.4,0.0,200.79,SRC_BSE_01,https://www.bseindia.com/publicissue.html
+IPO_2021_009,Easy Trip Planners Ltd,77.53,382.21,70.4,0.0,159.33,SRC_BSE_01,https://www.bseindia.com/publicissue.html
+IPO_2021_010,Anupam Rasayan India Ltd,65.74,97.42,10.77,0.0,44.06,SRC_BSE_01,https://www.bseindia.com/publicissue.html
+IPO_2021_011,Laxmi Organic Industries Ltd,175.43,217.62,20.1,0.0,106.81,SRC_BSE_01,https://www.bseindia.com/publicissue.html
+IPO_2021_012,Craftsman Automation Ltd,5.21,2.84,3.43,0.0,3.81,SRC_BSE_01,https://www.bseindia.com/publicissue.html
+IPO_2021_013,Nazara Technologies Ltd,103.77,389.89,75.29,0.0,175.46,SRC_BSE_01,https://www.bseindia.com/publicissue.html
+IPO_2021_014,Kalyan Jewellers India Ltd,2.76,1.91,2.82,0.0,2.61,SRC_BSE_01,https://www.bseindia.com/publicissue.html
+IPO_2021_015,Barbeque Nation Hospitality Ltd,5.11,3.1,13.13,0.0,5.98,SRC_BSE_01,https://www.bseindia.com/publicissue.html
+IPO_2021_016,Macrotech Developers Ltd (Lodha),3.05,1.44,0.4,0.0,1.36,SRC_BSE_01,https://www.bseindia.com/publicissue.html
+IPO_2021_017,Shyam Metalics and Energy Ltd,156.29,512.5,11.64,0.0,121.43,SRC_BSE_01,https://www.bseindia.com/publicissue.html
+IPO_2021_018,Sona BLW Precision Forgings Ltd,3.46,0.39,1.58,0.0,2.28,SRC_BSE_01,https://www.bseindia.com/publicissue.html
+IPO_2021_019,Krishna Institute of Med Sciences,5.26,1.89,1.86,0.0,3.86,SRC_BSE_01,https://www.bseindia.com/publicissue.html
+IPO_2021_020,Dodla Dairy Ltd,84.88,73.26,10.99,0.0,45.62,SRC_BSE_01,https://www.bseindia.com/publicissue.html
+IPO_2021_021,Clean Science and Technology Ltd,156.37,206.43,9.0,0.0,93.41,SRC_BSE_01,https://www.bseindia.com/publicissue.html
+IPO_2021_022,G.R. Infraprojects Ltd,168.58,238.04,12.57,0.0,102.58,SRC_BSE_01,https://www.bseindia.com/publicissue.html
+IPO_2021_023,Zomato Limited,51.79,32.96,7.45,0.0,38.25,SRC_BSE_01,https://www.bseindia.com/publicissue.html
+IPO_2021_024,Tatva Chintan Pharma Chem Ltd,185.23,512.22,35.35,0.0,180.36,SRC_BSE_01,https://www.bseindia.com/publicissue.html
+IPO_2021_025,Glenmark Life Sciences Ltd,36.97,122.54,14.63,0.0,44.17,SRC_BSE_01,https://www.bseindia.com/publicissue.html
+IPO_2021_026,Rolex Rings Ltd,143.58,360.11,24.49,0.0,130.44,SRC_BSE_01,https://www.bseindia.com/publicissue.html
+IPO_2021_027,Devyani International Ltd,95.27,213.06,39.48,0.0,116.71,SRC_BSE_01,https://www.bseindia.com/publicissue.html
+IPO_2021_028,Aptus Value Housing Finance,32.41,33.91,7.36,0.0,17.2,SRC_BSE_01,https://www.bseindia.com/publicissue.html
+IPO_2021_029,Ami Organics Ltd,86.64,154.81,13.36,0.0,64.54,SRC_BSE_01,https://www.bseindia.com/publicissue.html
+IPO_2021_030,Paras Defence & Space Tech,169.65,927.7,112.81,0.0,304.26,SRC_BSE_01,https://www.bseindia.com/publicissue.html
+IPO_2021_031,FSN E-Commerce Ventures (Nykaa),91.18,112.02,12.24,0.0,81.78,SRC_BSE_01,https://www.bseindia.com/publicissue.html
+IPO_2021_032,One97 Communications (Paytm),2.79,0.24,1.66,0.0,1.89,SRC_BSE_01,https://www.bseindia.com/publicissue.html
+IPO_2021_033,Latent View Analytics Ltd,145.48,850.66,119.44,0.0,326.49,SRC_BSE_01,https://www.bseindia.com/publicissue.html
+IPO_2021_034,Data Patterns (India) Ltd,190.86,254.22,23.14,0.0,119.62,SRC_BSE_01,https://www.bseindia.com/publicissue.html
+IPO_2022_001,AGS Transact Technologies Ltd,2.82,3.4,3.08,0.0,3.06,SRC_BSE_01,https://www.bseindia.com/publicissue.html
+IPO_2022_002,Adani Wilmar Ltd,5.73,56.25,3.92,0.0,17.37,SRC_BSE_01,https://www.bseindia.com/publicissue.html
+IPO_2022_003,Vedant Fashions Ltd (Manyavar),7.49,1.07,0.39,0.0,2.57,SRC_BSE_01,https://www.bseindia.com/publicissue.html
+IPO_2022_004,Campus Activewear Ltd,152.04,22.25,7.68,0.0,51.75,SRC_BSE_01,https://www.bseindia.com/publicissue.html
+IPO_2022_005,Rainbow Children's Medicare,38.9,3.73,1.38,0.0,12.43,SRC_BSE_01,https://www.bseindia.com/publicissue.html
+IPO_2022_006,LIC of India,2.83,2.91,1.99,0.0,2.95,SRC_BSE_01,https://www.bseindia.com/publicissue.html
+IPO_2022_007,Prudent Corporate Advisory,1.26,0.99,1.22,0.0,1.22,SRC_BSE_01,https://www.bseindia.com/publicissue.html
+IPO_2022_008,Venus Pipes & Tubes Ltd,12.02,15.69,24.29,0.0,16.31,SRC_BSE_01,https://www.bseindia.com/publicissue.html
+IPO_2022_009,Delhivery Ltd,2.66,0.3,0.57,0.0,1.63,SRC_BSE_01,https://www.bseindia.com/publicissue.html
+IPO_2022_010,Aether Industries Ltd,17.57,2.52,1.14,0.0,6.26,SRC_BSE_01,https://www.bseindia.com/publicissue.html
+IPO_2022_011,Syrma SGS Technology Ltd,87.56,17.05,5.53,0.0,32.61,SRC_BSE_01,https://www.bseindia.com/publicissue.html
+IPO_2022_012,Dreamfolks Services Ltd,70.53,37.66,43.66,0.0,56.68,SRC_BSE_01,https://www.bseindia.com/publicissue.html
+IPO_2022_013,Harsha Engineers Intl Ltd,178.61,71.32,17.63,0.0,74.7,SRC_BSE_01,https://www.bseindia.com/publicissue.html
+IPO_2022_014,Electronics Mart India Ltd,169.54,63.59,19.71,0.0,71.93,SRC_BSE_01,https://www.bseindia.com/publicissue.html
+IPO_2022_015,DCX Systems Ltd,168.3,90.55,61.77,0.0,69.79,SRC_BSE_01,https://www.bseindia.com/publicissue.html
+IPO_2022_016,Global Health Ltd (Medanta),28.64,4.02,1.52,0.0,9.58,SRC_BSE_01,https://www.bseindia.com/publicissue.html
+IPO_2022_017,Bikaji Foods International Ltd,80.63,7.1,4.77,0.0,26.67,SRC_BSE_01,https://www.bseindia.com/publicissue.html
+IPO_2022_018,Kaynes Technology India Ltd,98.47,20.98,4.09,0.0,34.16,SRC_BSE_01,https://www.bseindia.com/publicissue.html
+IPO_2022_019,Five-Star Business Finance Ltd,1.77,0.61,0.11,0.0,0.7,SRC_BSE_01,https://www.bseindia.com/publicissue.html
+IPO_2022_020,Archean Chemical Industries,48.91,14.9,9.96,0.0,32.23,SRC_BSE_01,https://www.bseindia.com/publicissue.html
+IPO_2022_021,Sula Vineyards Ltd,4.13,1.51,1.65,0.0,2.33,SRC_BSE_01,https://www.bseindia.com/publicissue.html
+IPO_2022_022,KFin Technologies Ltd,2.76,0.23,1.85,0.0,2.59,SRC_BSE_01,https://www.bseindia.com/publicissue.html
+IPO_2022_023,Landmark Cars Ltd,8.71,1.32,0.59,0.0,3.06,SRC_BSE_01,https://www.bseindia.com/publicissue.html
+IPO_2022_024,Elin Electronics Ltd,4.51,3.29,2.2,0.0,3.09,SRC_BSE_01,https://www.bseindia.com/publicissue.html
+IPO_2023_001,Mankind Pharma Ltd,49.16,3.8,0.92,0.0,15.32,SRC_BSE_01,https://www.bseindia.com/publicissue.html
+IPO_2023_002,IdeaForge Technology Ltd,125.81,80.58,85.2,0.0,106.06,SRC_BSE_01,https://www.bseindia.com/publicissue.html
+IPO_2023_003,Cyient DLM Ltd,90.44,45.05,49.22,0.0,67.31,SRC_BSE_01,https://www.bseindia.com/publicissue.html
+IPO_2023_004,Senco Gold Ltd,180.94,64.99,15.46,0.0,73.35,SRC_BSE_01,https://www.bseindia.com/publicissue.html
+IPO_2023_005,Utkarsh Small Finance Bank,124.85,81.64,72.11,0.0,101.91,SRC_BSE_01,https://www.bseindia.com/publicissue.html
+IPO_2023_006,Netweb Technologies India Ltd,228.91,197.59,61.71,0.0,141.42,SRC_BSE_01,https://www.bseindia.com/publicissue.html
+IPO_2023_007,Yatharth Hospital & Trauma Care,85.1,37.22,8.34,0.0,36.16,SRC_BSE_01,https://www.bseindia.com/publicissue.html
+IPO_2023_008,SBFC Finance Ltd,192.9,49.09,10.99,0.0,70.16,SRC_BSE_01,https://www.bseindia.com/publicissue.html
+IPO_2023_009,Concord Biotech Ltd,67.67,16.99,3.78,0.0,24.87,SRC_BSE_01,https://www.bseindia.com/publicissue.html
+IPO_2023_010,Aeroflex Industries Ltd,194.75,126.13,34.41,0.0,97.11,SRC_BSE_01,https://www.bseindia.com/publicissue.html
+IPO_2023_011,Vishnu Prakash R Punglia Ltd,171.69,111.03,32.01,0.0,87.82,SRC_BSE_01,https://www.bseindia.com/publicissue.html
+IPO_2023_012,RR Kabel Ltd,52.26,13.23,2.13,0.0,18.69,SRC_BSE_01,https://www.bseindia.com/publicissue.html
+IPO_2023_013,JSW Infrastructure Ltd,57.09,15.98,10.32,0.0,37.37,SRC_BSE_01,https://www.bseindia.com/publicissue.html
+IPO_2023_014,Signatureglobal (India) Ltd,12.71,13.54,6.82,0.0,11.88,SRC_BSE_01,https://www.bseindia.com/publicissue.html
+IPO_2023_015,Plaza Wires Ltd,42.84,388.09,374.81,0.0,160.97,SRC_BSE_01,https://www.bseindia.com/publicissue.html
+IPO_2023_016,Cello World Ltd,108.57,24.42,3.06,0.0,38.9,SRC_BSE_01,https://www.bseindia.com/publicissue.html
+IPO_2023_017,Honasa Consumer (Mamaearth),11.5,4.02,1.35,0.0,7.61,SRC_BSE_01,https://www.bseindia.com/publicissue.html
+IPO_2023_018,Protean eGov Technologies,46.94,31.62,8.93,0.0,23.86,SRC_BSE_01,https://www.bseindia.com/publicissue.html
+IPO_2023_019,ASK Automotive Ltd,142.41,35.47,5.7,0.0,51.14,SRC_BSE_01,https://www.bseindia.com/publicissue.html
+IPO_2023_020,Tata Technologies Ltd,203.41,62.11,16.5,0.0,69.43,SRC_BSE_01,https://www.bseindia.com/publicissue.html
+IPO_2023_021,IREDA Ltd,104.57,24.16,7.73,0.0,38.8,SRC_BSE_01,https://www.bseindia.com/publicissue.html
+IPO_2023_022,Gandhar Oil Refinery Ltd,129.06,26.34,28.95,0.0,64.07,SRC_BSE_01,https://www.bseindia.com/publicissue.html
+IPO_2023_023,Flair Writing Industries Ltd,115.6,33.37,13.01,0.0,46.68,SRC_BSE_01,https://www.bseindia.com/publicissue.html
+IPO_2023_024,DOMS Industries Ltd,115.97,66.51,69.67,0.0,93.52,SRC_BSE_01,https://www.bseindia.com/publicissue.html
+IPO_2023_025,India Shelter Finance Corp,89.7,28.47,9.92,0.0,36.71,SRC_BSE_01,https://www.bseindia.com/publicissue.html
+IPO_2023_026,INOX India Ltd,147.8,53.2,15.3,0.0,61.28,SRC_BSE_01,https://www.bseindia.com/publicissue.html
+IPO_2023_027,Motisons Jewellers Ltd,157.4,233.91,122.28,0.0,159.61,SRC_BSE_01,https://www.bseindia.com/publicissue.html
+IPO_2023_028,Azad Engineering Ltd,179.66,90.24,23.79,0.0,80.65,SRC_BSE_01,https://www.bseindia.com/publicissue.html
+IPO_2024_001,Jyoti CNC Automation Ltd,44.13,36.48,26.18,0.0,38.53,SRC_BSE_01,https://www.bseindia.com/publicissue.html
+IPO_2024_002,Medi Assist Healthcare,40.14,14.85,3.19,0.0,16.25,SRC_BSE_01,https://www.bseindia.com/publicissue.html
+IPO_2024_003,BLS E-Services Ltd,174.79,300.14,237.86,0.0,162.48,SRC_BSE_01,https://www.bseindia.com/publicissue.html
+IPO_2024_004,Rashi Peripherals Ltd,143.68,62.75,10.88,0.0,59.5,SRC_BSE_01,https://www.bseindia.com/publicissue.html
+IPO_2024_005,Jana Small Finance Bank Ltd,25.05,25.11,5.46,0.0,18.5,SRC_BSE_01,https://www.bseindia.com/publicissue.html
+IPO_2024_006,Exicom Tele-Systems Ltd,121.8,153.22,119.59,0.0,129.54,SRC_BSE_01,https://www.bseindia.com/publicissue.html
+IPO_2024_007,Platinum Industries Ltd,151.0,141.83,50.99,0.0,106.44,SRC_BSE_01,https://www.bseindia.com/publicissue.html
+IPO_2024_008,Mukka Proteins Ltd,189.28,250.38,58.52,0.0,136.99,SRC_BSE_01,https://www.bseindia.com/publicissue.html
+IPO_2024_009,Bharti Hexacom Ltd,48.57,10.52,2.83,0.0,29.88,SRC_BSE_01,https://www.bseindia.com/publicissue.html
+IPO_2024_010,JNK India Ltd,75.72,23.26,4.11,0.0,28.13,SRC_BSE_01,https://www.bseindia.com/publicissue.html
+IPO_2024_011,Indegene Ltd,192.72,55.91,7.86,0.0,70.3,SRC_BSE_01,https://www.bseindia.com/publicissue.html
+IPO_2024_012,Aadhar Housing Finance Ltd,72.84,16.5,2.46,0.0,25.49,SRC_BSE_01,https://www.bseindia.com/publicissue.html
+IPO_2024_013,TBO Tek Ltd,125.51,50.6,17.82,0.0,86.7,SRC_BSE_01,https://www.bseindia.com/publicissue.html
+IPO_2024_014,Go Digit General Insurance,9.49,7.24,4.27,0.0,9.6,SRC_BSE_01,https://www.bseindia.com/publicissue.html
+IPO_2024_015,Awfis Space Solutions Ltd,116.95,78.28,54.58,0.0,108.56,SRC_BSE_01,https://www.bseindia.com/publicissue.html
+IPO_2024_016,Kronox Lab Sciences Ltd,89.03,301.92,54.23,0.0,117.25,SRC_BSE_01,https://www.bseindia.com/publicissue.html
+IPO_2024_017,DEE Development Engineers,96.79,144.0,23.42,0.0,99.56,SRC_BSE_01,https://www.bseindia.com/publicissue.html
+IPO_2024_018,Akme Fintrade India Ltd,27.32,130.33,45.78,0.0,55.12,SRC_BSE_01,https://www.bseindia.com/publicissue.html
+IPO_2024_019,Stanley Lifestyles Ltd,222.1,119.52,19.21,0.0,96.98,SRC_BSE_01,https://www.bseindia.com/publicissue.html
+IPO_2024_020,Emcure Pharmaceuticals Ltd,68.3,49.92,7.36,0.0,67.87,SRC_BSE_01,https://www.bseindia.com/publicissue.html

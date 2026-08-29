@@ -1,0 +1,12 @@
+check_name,category,status,records_tested,violations_found,description,action
+DUPLICATE_RECORDS_CHECK,IDENTIFICATION,PASS,106,0,Checks for duplicate IPO IDs or duplicate company names,PASS
+ISSUE_SIZE_VALIDATION,FINANCIAL_STRUCTURE,PASS,106,0,Verifies issue size is strictly positive and non-null,PASS
+PRICE_BAND_HIERARCHY,FINANCIAL_STRUCTURE,PASS,106,0,Verifies upper price band >= lower price band and prices > 0,PASS
+LOT_SIZE_VALIDATION,ISSUE_TERMS,PASS,106,0,Verifies minimum lot size is a positive integer,PASS
+DATE_SEQUENCE_HIERARCHY,TEMPORAL_INTEGRITY,PASS,106,0,Verifies chronological sequence: announcement <= open <= close,PASS
+TARGET_VARIABLES_INTEGRITY,TARGETS,PASS,424,0,Verifies all 4 subscription targets are non-null and >= 0.0,PASS
+CATEGORY_QUOTA_SUM_CHECK,ISSUE_TERMS,PASS,106,0,Verifies that category reservation quotas sum to 100% (+/- 1%),PASS
+SOURCE_METADATA_COMPLETENESS,METADATA,PASS,106,0,Ensures every record contains a valid source registry ID and URL,PASS
+INDIA_VIX_SANITY_CHECK,MARKET_DATA,PASS,106,0,Ensures India VIX falls within historical limits (8 to 60),PASS
+TEMPORAL_LEAKAGE_AUDIT,ANTI_LEAKAGE,PASS,106,0,Verifies all pre-IPO features have timestamps <= feature cutoff,PASS
+IMPUTATION_LEAKAGE_AUDIT,ANTI_LEAKAGE,PASS,106,0,Verifies imputation parameters are fitted strictly on training partition only,PASS

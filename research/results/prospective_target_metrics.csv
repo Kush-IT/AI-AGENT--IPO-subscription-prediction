@@ -1,0 +1,5 @@
+target,model,n,mae,rmse,median_ae,mape,mean_signed_error,median_signed_error,max_absolute_error
+total_subscription,XGBoost log1p,1,2.14,2.14,2.14,4.1683,-2.14,-2.14,2.14
+qib_subscription,Random Forest RAW,1,4.91,4.91,4.91,4.1463,-4.91,-4.91,4.91
+nii_subscription,LightGBM log1p,1,4.07,4.07,4.07,6.5487,-4.07,-4.07,4.07
+retail_subscription,XGBoost RAW,1,0.34,0.34,0.34,2.0178,0.34,0.34,0.34

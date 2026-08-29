@@ -1,0 +1,75 @@
+{
+  "company_name": "Lumino Industries Ltd",
+  "isin": "INE0ABC01019",
+  "ipo_open_date": "2026-08-27",
+  "ipo_close_date": "2026-08-31",
+  "statutory_feature_cutoff": "2026-08-27T09:59:59+05:30",
+  "retrieval_timestamp": "2026-08-26T16:15:00+05:30",
+  "sources_consulted": [
+    {
+      "priority": 1,
+      "source_name": "SEBI / RHP Filing",
+      "document_type": "Red Herring Prospectus (RHP)",
+      "filing_date": "2026-08-21",
+      "source_url": "https://www.sebi.gov.in/filings/public-issues/aug-2026/lumino-industries-limited-rhp_85642.html",
+      "fields_extracted": [
+        "issue_size_in_crore", "fresh_issue_in_crore", "ofs_in_crore",
+        "price_low", "price_high", "lot_size", "face_value",
+        "qib_quota_pct", "nii_quota_pct", "retail_quota_pct",
+        "revenue_latest_cr", "revenue_cagr_3yr", "pat_latest_cr", "pat_cagr_3yr",
+        "ebitda_margin_pct", "eps_pre_ipo", "roe_pct", "roce_pct",
+        "debt_equity_ratio", "operating_cash_flow_cr", "pe_ratio", "pb_ratio", "sector"
+      ],
+      "verification_status": "OFFICIAL_STATUTORY_VERIFIED"
+    },
+    {
+      "priority": 2,
+      "source_name": "National Stock Exchange of India (NSE)",
+      "document_type": "NSE IPO Forthcoming / Current Issues Master",
+      "observed_at": "2026-08-26T15:30:00+05:30",
+      "source_url": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
+      "fields_extracted": ["issue_dates", "lot_size", "price_band", "anchor_allotment_cr"],
+      "verification_status": "EXCHANGE_VERIFIED"
+    },
+    {
+      "priority": 3,
+      "source_name": "BSE India",
+      "document_type": "BSE Public Issue Notice",
+      "observed_at": "2026-08-26T15:30:00+05:30",
+      "source_url": "https://www.bseindia.com/markets/publicIssues/IPOIssues_new.aspx",
+      "fields_extracted": ["issue_dates", "price_band", "lot_size"],
+      "verification_status": "EXCHANGE_VERIFIED"
+    },
+    {
+      "priority": 4,
+      "source_name": "Secondary Market Indices (NSE / BSE)",
+      "document_type": "EOD Market Index Feed",
+      "observed_at": "2026-08-26T16:00:00+05:30",
+      "source_url": "https://www.nseindia.com/reports-indices-market-data",
+      "fields_extracted": [
+        "nifty_1d_return", "nifty_5d_return", "nifty_20d_return",
+        "sensex_1d_return", "sensex_5d_return", "sensex_20d_return",
+        "india_vix", "india_vix_5d_change"
+      ],
+      "verification_status": "EXCHANGE_VERIFIED"
+    },
+    {
+      "priority": 5,
+      "source_name": "Financial News / Editorial Coverage",
+      "document_type": "Pre-IPO News Articles",
+      "observed_at": "2026-08-26T14:00:00+05:30",
+      "source_url": "https://economictimes.indiatimes.com/markets/ipos/fpos/lumino-industries-ipo",
+      "fields_extracted": ["news_count", "average_sentiment_score", "positive_news_ratio", "negative_news_ratio"],
+      "verification_status": "MEDIA_CURATED"
+    },
+    {
+      "priority": 6,
+      "source_name": "Grey Market Observations",
+      "document_type": "Pre-Open Secondary Premium Registry",
+      "observed_at": "2026-08-26T12:00:00+05:30",
+      "source_url": "https://www.chittorgarh.com/ipo/lumino-industries-ipo-gmp",
+      "fields_extracted": ["gmp_in_inr", "gmp_percentage"],
+      "verification_status": "UNOFFICIAL_PREOPEN_GMP_RECONCILED"
+    }
+  ]
+}

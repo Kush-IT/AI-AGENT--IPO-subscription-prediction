@@ -1,0 +1,30 @@
+{
+  "dataset_name": "Indian Mainboard Pre-IPO Subscription Research Dataset",
+  "version": "1.1.0",
+  "created_at": "2026-08-23T21:35:50.035478",
+  "market_coverage": "Indian National Stock Exchange (NSE) and Bombay Stock Exchange (BSE)",
+  "segment": "MAINBOARD",
+  "number_of_ipos": 106,
+  "date_range": {
+    "earliest_ipo_date": "2021-01-18",
+    "latest_ipo_date": "2024-07-03"
+  },
+  "number_of_features": 40,
+  "number_of_targets": 4,
+  "number_of_sources": 7,
+  "missing_value_statistics": {
+    "total_cells": 5088,
+    "total_missing_cells": 0,
+    "missing_percentage": 0.0
+  },
+  "leakage_violations": 0,
+  "imputation_leakage_violations": 0,
+  "chronological_partitions": {
+    "train_size": 74,
+    "train_period": "2021-01-18 to 2023-10-30",
+    "val_size": 15,
+    "val_period": "2023-10-31 to 2024-01-30",
+    "test_size": 17,
+    "test_period": "2024-02-07 to 2024-07-03"
+  }
+}

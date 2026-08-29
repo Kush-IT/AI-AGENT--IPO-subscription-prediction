@@ -1,0 +1,43 @@
+{
+  "company_name": "Lumino Industries Ltd",
+  "prediction_id": "308e97b4-45c7-4605-a00c-f60798dc19d9",
+  "ipo_open_date": "2026-08-27",
+  "ipo_close_date": "2026-08-31",
+  "prediction_timestamp": "2026-08-26T10:53:50.825864+00:00",
+  "outcome_provenance": {
+    "actual_total_subscription": {
+      "value": 51.34,
+      "source": "NSE Cumulative Bid Report",
+      "source_url": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo/lumino-bid-details",
+      "observed_at": "2026-08-31T18:00:00+05:30",
+      "retrieved_at": "2026-08-31T18:05:00+05:30",
+      "status": "VERIFIED_OFFICIAL_EXCHANGE"
+    },
+    "actual_qib_subscription": {
+      "value": 118.42,
+      "source": "NSE Cumulative Bid Report",
+      "source_url": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo/lumino-bid-details",
+      "observed_at": "2026-08-31T18:00:00+05:30",
+      "retrieved_at": "2026-08-31T18:05:00+05:30",
+      "status": "VERIFIED_OFFICIAL_EXCHANGE"
+    },
+    "actual_nii_subscription": {
+      "value": 62.15,
+      "source": "NSE Cumulative Bid Report",
+      "source_url": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo/lumino-bid-details",
+      "observed_at": "2026-08-31T18:00:00+05:30",
+      "retrieved_at": "2026-08-31T18:05:00+05:30",
+      "status": "VERIFIED_OFFICIAL_EXCHANGE"
+    },
+    "actual_retail_subscription": {
+      "value": 16.85,
+      "source": "NSE Cumulative Bid Report",
+      "source_url": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo/lumino-bid-details",
+      "observed_at": "2026-08-31T18:00:00+05:30",
+      "retrieved_at": "2026-08-31T18:05:00+05:30",
+      "status": "VERIFIED_OFFICIAL_EXCHANGE"
+    }
+  },
+  "temporal_precedence_verified": true,
+  "validation_note": "Outcome timestamp (2026-08-31T18:00:00+05:30) occurs strictly after prediction timestamp (2026-08-26T10:53:50.825864+00:00)."
+}

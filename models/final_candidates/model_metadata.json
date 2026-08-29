@@ -1,0 +1,90 @@
+{
+  "model_registry_version": "1.0.0-final-candidates",
+  "training_date": "2026-08-23T22:01:24.269830",
+  "development_dataset": {
+    "total_observations": 89,
+    "date_range": "2021-01-18 to 2024-01-30",
+    "features_used": 45
+  },
+  "quarantined_test_dataset": {
+    "total_observations": 17,
+    "date_range": "2024-02-07 to 2024-07-03"
+  },
+  "selected_candidates": {
+    "qib_subscription": {
+      "model_name": "Random_Forest",
+      "target_transform": "raw",
+      "hyperparameters": {
+        "n_estimators": 120,
+        "max_depth": 4,
+        "min_samples_split": 6,
+        "min_samples_leaf": 3,
+        "max_features": 0.6,
+        "bootstrap": true
+      },
+      "mean_MAE": 27.6013,
+      "std_MAE": 8.3786,
+      "mean_RMSE": 35.0953,
+      "mean_MedianAE": 21.021,
+      "mean_R2": 0.4703
+    },
+    "nii_subscription": {
+      "model_name": "LightGBM",
+      "target_transform": "log1p",
+      "hyperparameters": {
+        "n_estimators": 80,
+        "max_depth": 3,
+        "num_leaves": 7,
+        "learning_rate": 0.03,
+        "subsample": 0.8,
+        "colsample_bytree": 0.7,
+        "min_child_samples": 8,
+        "reg_alpha": 0.5,
+        "reg_lambda": 1.5
+      },
+      "mean_MAE": 34.0057,
+      "std_MAE": 11.8592,
+      "mean_RMSE": 58.1319,
+      "mean_MedianAE": 16.7835,
+      "mean_R2": -4.9213
+    },
+    "retail_subscription": {
+      "model_name": "XGBoost",
+      "target_transform": "raw",
+      "hyperparameters": {
+        "n_estimators": 100,
+        "max_depth": 3,
+        "learning_rate": 0.05,
+        "subsample": 0.8,
+        "colsample_bytree": 0.8,
+        "reg_alpha": 0.1,
+        "reg_lambda": 1.0,
+        "min_child_weight": 1
+      },
+      "mean_MAE": 20.3296,
+      "std_MAE": 12.0296,
+      "mean_RMSE": 42.5447,
+      "mean_MedianAE": 10.7011,
+      "mean_R2": -0.2751
+    },
+    "total_subscription": {
+      "model_name": "XGBoost",
+      "target_transform": "log1p",
+      "hyperparameters": {
+        "n_estimators": 60,
+        "max_depth": 2,
+        "learning_rate": 0.05,
+        "subsample": 0.8,
+        "colsample_bytree": 0.7,
+        "reg_alpha": 0.1,
+        "reg_lambda": 1.0,
+        "min_child_weight": 2
+      },
+      "mean_MAE": 14.5585,
+      "std_MAE": 3.3208,
+      "mean_RMSE": 21.3496,
+      "mean_MedianAE": 8.5228,
+      "mean_R2": 0.3764
+    }
+  }
+}

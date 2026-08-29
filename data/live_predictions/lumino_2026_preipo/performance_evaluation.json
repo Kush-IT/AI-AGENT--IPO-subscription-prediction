@@ -1,0 +1,50 @@
+{
+  "prediction_id": "308e97b4-45c7-4605-a00c-f60798dc19d9",
+  "company_name": "Lumino Industries Ltd",
+  "evaluation_timestamp": "2026-08-26T10:58:34.602497+00:00",
+  "sample_classification": "N=1 Prospective Case Study",
+  "targets": {
+    "total_subscription": {
+      "predicted": 49.2,
+      "actual": 51.34,
+      "absolute_error": 2.14,
+      "signed_error": -2.14,
+      "absolute_percentage_error_pct": 4.17
+    },
+    "qib_subscription": {
+      "predicted": 113.51,
+      "actual": 118.42,
+      "absolute_error": 4.91,
+      "signed_error": -4.91,
+      "absolute_percentage_error_pct": 4.15
+    },
+    "nii_subscription": {
+      "predicted": 58.08,
+      "actual": 62.15,
+      "absolute_error": 4.07,
+      "signed_error": -4.07,
+      "absolute_percentage_error_pct": 6.55
+    },
+    "retail_subscription": {
+      "predicted": 17.19,
+      "actual": 16.85,
+      "absolute_error": 0.34,
+      "signed_error": 0.34,
+      "absolute_percentage_error_pct": 2.02
+    }
+  },
+  "category_recommendation_evaluation": {
+    "predicted_best_category": "QIB",
+    "actual_strongest_category": "QIB",
+    "category_prediction_correct": true,
+    "actual_category_edge_pct": 90.54
+  },
+  "confidence_calibration": {
+    "original_confidence_score": 100,
+    "original_confidence_level": "HIGH",
+    "total_ape_pct": 4.17,
+    "calibration_status": "WELL_CALIBRATED"
+  },
+  "drift_status": "LOW (PSI < 0.10, Model Stable)",
+  "governance_note": "Original prospective forecast was locked ex-ante before market opening. Outcome attached strictly post-offering."
+}

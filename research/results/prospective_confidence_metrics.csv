@@ -1,0 +1,2 @@
+confidence_tier,count,mean_total_mae,mean_total_mape_pct,category_accuracy_pct,calibration_status,governance_note
+HIGH,1,2.14,4.1683,100.0,WELL_CALIBRATED,Descriptive only (N=1)
