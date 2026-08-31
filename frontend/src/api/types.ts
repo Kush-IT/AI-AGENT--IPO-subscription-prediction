@@ -291,3 +291,129 @@ export interface ApiErrorResponse {
   message: string;
   details?: Record<string, unknown>;
 }
+
+// --- Phase 20 Weekly Rolling Retraining Types ---
+
+export interface RetrainingTargetMetrics {
+  mae: number;
+  rmse: number;
+  median_ae: number;
+  mape: number;
+  r2: number;
+  signed_bias: number;
+}
+
+export interface ModelComparisonData {
+  total_metrics_current: RetrainingTargetMetrics;
+  total_metrics_candidate: RetrainingTargetMetrics;
+  total_mae_difference: number;
+  qib_metrics_current: RetrainingTargetMetrics;
+  qib_metrics_candidate: RetrainingTargetMetrics;
+  qib_mae_difference: number;
+  nii_metrics_current: RetrainingTargetMetrics;
+  nii_metrics_candidate: RetrainingTargetMetrics;
+  nii_mae_difference: number;
+  retail_metrics_current: RetrainingTargetMetrics;
+  retail_metrics_candidate: RetrainingTargetMetrics;
+  retail_mae_difference: number;
+  category_ranking_accuracy_current_pct: number;
+  category_ranking_accuracy_candidate_pct: number;
+  strongest_category_accuracy_current_pct: number;
+  strongest_category_accuracy_candidate_pct: number;
+}
+
+export interface PromotionGateCheckItem {
+  check_name: string;
+  passed: boolean;
+  details: string;
+}
+
+export interface PromotionDecisionData {
+  decision: string;
+  passed_all_checks: boolean;
+  checks: PromotionGateCheckItem[];
+  rationale: string;
+}
+
+export interface CandidateMetadataData {
+  model_version: string;
+  training_date: string;
+  architecture: string;
+  training_sample_count: number;
+  validation_sample_count: number;
+  artifacts_directory: string;
+  sha256_hashes: Record<string, string>;
+  features_used: string[];
+}
+
+export interface RetrainingStatusResponse {
+  current_production_model: string;
+  production_integrity_verified: boolean;
+  latest_run_id: string | null;
+  latest_run_date: string | null;
+  latest_status: string;
+  latest_candidate: CandidateMetadataData | null;
+  latest_comparison: ModelComparisonData | null;
+  latest_promotion_decision: string;
+  latest_manifest_path: string | null;
+  rolling_window_days: number;
+  minimum_samples: number;
+}
+
+export interface RetrainingHistoryRecord {
+  run_id: string;
+  timestamp: string;
+  evaluation_date: string;
+  is_dry_run: boolean;
+  status: string;
+  eligible_count: number;
+  training_sample_count: number;
+  validation_sample_count: number;
+  candidate_version: string | null;
+  promotion_decision: string;
+  manifest_path: string;
+}
+
+export interface RetrainingRunRequest {
+  run_date?: string | null;
+  dry_run?: boolean;
+  min_samples?: number;
+  force_promote?: boolean;
+}
+
+export interface RetrainingRunResponse {
+  run_id: string;
+  timestamp: string;
+  evaluation_date: string;
+  is_dry_run: boolean;
+  status: string;
+  message: string;
+  production_model_integrity_verified: boolean;
+  feature_drift_status: Record<string, unknown>;
+  data_selection: {
+    evaluation_date: string;
+    window_start_date: string;
+    window_end_date: string;
+    total_candidates_found: number;
+    eligible_count: number;
+    rejected_count: number;
+    training_sample_count: number;
+    validation_sample_count: number;
+    minimum_sample_threshold: number;
+    is_sample_size_sufficient: boolean;
+    is_validation_split_sufficient: boolean;
+    records_audit: Array<{
+      ipo_id: string;
+      company_name: string;
+      ipo_close_date: string;
+      included: boolean;
+      split?: string;
+      rejection_reason?: string;
+    }>;
+  };
+  candidate_metadata: CandidateMetadataData | null;
+  comparison_metrics: ModelComparisonData | null;
+  promotion_decision: PromotionDecisionData;
+  manifest_path: string | null;
+}
+

@@ -9,9 +9,19 @@ import {
   Database,
   CheckCircle2,
   ListFilter,
+  RefreshCw,
+  AlertTriangle,
+  Layers,
+  FileText,
 } from 'lucide-react';
 import { apiClient } from '../api/client';
+import { ipoApi } from '../api/ipoApi';
 import { formatMultiple } from '../utils/formatting';
+import {
+  RetrainingStatusResponse,
+  RetrainingHistoryRecord,
+  RetrainingRunResponse,
+} from '../api/types';
 
 interface MonitoringSummary {
   total_predictions_count: number;
@@ -95,6 +105,7 @@ export const Monitoring: React.FC = () => {
   const queryClient = useQueryClient();
   const [showAttachModal, setShowAttachModal] = useState(false);
   const [selectedPredId, setSelectedPredId] = useState<string>('');
+  const [lastDryRunResult, setLastDryRunResult] = useState<RetrainingRunResponse | null>(null);
   const [outcomeForm, setOutcomeForm] = useState({
     company_name: '',
     ipo_close_date: '',
@@ -106,7 +117,7 @@ export const Monitoring: React.FC = () => {
     outcome_source_url: 'https://www.nseindia.com',
   });
 
-  // 1. Fetch Summary
+  // 1. Fetch Prospective Monitoring Summary
   const { data: summary } = useQuery<MonitoringSummary>({
     queryKey: ['monitoring-summary'],
     queryFn: () => apiClient.get('/api/v1/monitoring/summary'),
@@ -127,11 +138,29 @@ export const Monitoring: React.FC = () => {
     refetchInterval: 10000,
   });
 
-  // 4. Fetch Cumulative Metrics
+  // 4. Fetch Cumulative Prospective Metrics
   const { data: cumulativeMetrics } = useQuery<CumulativeMetrics>({
     queryKey: ['cumulative-metrics'],
     queryFn: () => apiClient.get('/api/v1/monitoring/metrics/cumulative'),
     refetchInterval: 10000,
+  });
+
+  // 5. Fetch Weekly Retraining Status
+  const {
+    data: retrainingStatus,
+    isLoading: isRetrainingLoading,
+    isError: isRetrainingError,
+  } = useQuery<RetrainingStatusResponse>({
+    queryKey: ['retraining-status'],
+    queryFn: () => ipoApi.getRetrainingStatus(),
+    refetchInterval: 15000,
+  });
+
+  // 6. Fetch Weekly Retraining History
+  const { data: retrainingHistory = [] } = useQuery<RetrainingHistoryRecord[]>({
+    queryKey: ['retraining-history'],
+    queryFn: () => ipoApi.getRetrainingHistory(),
+    refetchInterval: 15000,
   });
 
   // Mutation to Attach Outcome
@@ -148,6 +177,16 @@ export const Monitoring: React.FC = () => {
       queryClient.invalidateQueries({ queryKey: ['prospective-registry'] });
       queryClient.invalidateQueries({ queryKey: ['cumulative-metrics'] });
       setShowAttachModal(false);
+    },
+  });
+
+  // Mutation to Run Retraining Dry Run
+  const retrainingDryRunMutation = useMutation({
+    mutationFn: () => ipoApi.runRetrainingDryRun(),
+    onSuccess: (data) => {
+      setLastDryRunResult(data);
+      queryClient.invalidateQueries({ queryKey: ['retraining-status'] });
+      queryClient.invalidateQueries({ queryKey: ['retraining-history'] });
     },
   });
 
@@ -169,6 +208,7 @@ export const Monitoring: React.FC = () => {
 
   const isModelStable = summary?.drift_summary?.model_status === 'STABLE';
   const completedCount = cumulativeMetrics?.number_of_completed_ipos ?? summary?.completed_outcomes_count ?? 0;
+  const isHighDrift = summary?.drift_summary?.feature_drift_level === 'HIGH' || summary?.drift_summary?.model_status === 'CRITICAL';
 
   return (
     <div style={{ maxWidth: '1200px', margin: '0 auto', display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
@@ -179,17 +219,17 @@ export const Monitoring: React.FC = () => {
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
               <Activity size={22} color="var(--brand-primary)" />
               <h2 style={{ fontSize: '1.4rem', fontWeight: 800, color: 'var(--text-main)' }}>
-                Prospective Model Monitoring & Forward Validation
+                Prospective Model Monitoring & Retraining Surveillance
               </h2>
             </div>
             <p style={{ fontSize: '0.85rem', color: 'var(--text-muted)' }}>
-              Out-of-sample forward prediction tracking, exchange outcome attachment, and PSI drift surveillance.
+              Out-of-sample forward validation tracking, PSI drift detection, and weekly rolling XGBoost retraining governance.
             </p>
           </div>
 
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
             <span className="badge badge-high" style={{ padding: '0.35rem 0.75rem', fontSize: '0.78rem' }}>
-              <ShieldCheck size={14} /> MODEL INTEGRITY: VERIFIED
+              <ShieldCheck size={14} /> PRODUCTION INTEGRITY: VERIFIED
             </span>
             <span className="badge badge-neutral" style={{ padding: '0.35rem 0.75rem', fontSize: '0.78rem', fontWeight: 700 }}>
               PROSPECTIVE N = {completedCount}
@@ -233,6 +273,244 @@ export const Monitoring: React.FC = () => {
           </div>
           <div style={{ fontSize: '0.72rem', color: 'var(--text-subtle)', marginTop: '0.2rem' }}>PSI threshold surveillance</div>
         </div>
+      </div>
+
+      {/* SECTION: Weekly Rolling Retraining Governance */}
+      <div className="card" style={{ borderLeft: '4px solid var(--brand-primary)' }}>
+        <div className="card-header" style={{ flexWrap: 'wrap', gap: '0.5rem' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+            <Layers size={20} color="var(--brand-primary)" />
+            <h3 className="card-title" style={{ fontSize: '1.15rem', fontWeight: 800 }}>
+              Weekly Rolling Retraining
+            </h3>
+          </div>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+            <button
+              onClick={() => retrainingDryRunMutation.mutate()}
+              disabled={retrainingDryRunMutation.isPending}
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '0.4rem',
+                padding: '0.4rem 0.85rem',
+                fontSize: '0.8rem',
+                fontWeight: 700,
+                backgroundColor: 'var(--brand-primary)',
+                color: '#fff',
+                border: 'none',
+                borderRadius: '6px',
+                cursor: retrainingDryRunMutation.isPending ? 'not-allowed' : 'pointer',
+              }}
+            >
+              <RefreshCw size={14} className={retrainingDryRunMutation.isPending ? 'spin' : ''} />
+              <span>{retrainingDryRunMutation.isPending ? 'Evaluating...' : 'Evaluate Weekly Retraining'}</span>
+            </button>
+          </div>
+        </div>
+
+        {isRetrainingLoading ? (
+          <div style={{ padding: '2rem', textAlign: 'center', color: 'var(--text-muted)' }}>
+            Loading retraining status...
+          </div>
+        ) : isRetrainingError ? (
+          <div style={{ padding: '1.5rem', textAlign: 'center', color: 'var(--accent-negative)' }}>
+            Unable to load retraining information.
+          </div>
+        ) : (
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
+            {/* Status Metadata Grid */}
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '0.75rem', backgroundColor: '#f8fafc', padding: '1rem', borderRadius: '8px', border: '1px solid var(--border-subtle)' }}>
+              <div>
+                <div style={{ fontSize: '0.72rem', color: 'var(--text-muted)', fontWeight: 600 }}>Production Model</div>
+                <div style={{ fontSize: '0.9rem', fontWeight: 800, color: 'var(--text-main)', fontFamily: 'JetBrains Mono' }}>
+                  {retrainingStatus?.current_production_model || '1.0.0-final-candidates'}
+                </div>
+              </div>
+              <div>
+                <div style={{ fontSize: '0.72rem', color: 'var(--text-muted)', fontWeight: 600 }}>Production Integrity</div>
+                <div style={{ fontSize: '0.9rem', fontWeight: 800, color: retrainingStatus?.production_integrity_verified ? 'var(--accent-positive)' : 'var(--accent-negative)' }}>
+                  {retrainingStatus?.production_integrity_verified ? 'VERIFIED' : 'FAILED'}
+                </div>
+              </div>
+              <div>
+                <div style={{ fontSize: '0.72rem', color: 'var(--text-muted)', fontWeight: 600 }}>Latest Status</div>
+                <div style={{ fontSize: '0.9rem', fontWeight: 800, color: 'var(--brand-primary)', fontFamily: 'JetBrains Mono' }}>
+                  {retrainingStatus?.latest_status || 'NO_RUN'}
+                </div>
+              </div>
+              <div>
+                <div style={{ fontSize: '0.72rem', color: 'var(--text-muted)', fontWeight: 600 }}>Latest Evaluation</div>
+                <div style={{ fontSize: '0.9rem', fontWeight: 800, color: 'var(--text-main)' }}>
+                  {retrainingStatus?.latest_run_date || 'N/A'}
+                </div>
+              </div>
+              <div>
+                <div style={{ fontSize: '0.72rem', color: 'var(--text-muted)', fontWeight: 600 }}>Rolling Window</div>
+                <div style={{ fontSize: '0.9rem', fontWeight: 800, color: 'var(--text-main)' }}>
+                  {retrainingStatus?.rolling_window_days || 30} days
+                </div>
+              </div>
+              <div>
+                <div style={{ fontSize: '0.72rem', color: 'var(--text-muted)', fontWeight: 600 }}>Minimum Samples</div>
+                <div style={{ fontSize: '0.9rem', fontWeight: 800, color: 'var(--text-main)' }}>
+                  {retrainingStatus?.minimum_samples || 10}
+                </div>
+              </div>
+              <div>
+                <div style={{ fontSize: '0.72rem', color: 'var(--text-muted)', fontWeight: 600 }}>Promotion Decision</div>
+                <div style={{ fontSize: '0.9rem', fontWeight: 800, color: 'var(--text-main)' }}>
+                  {retrainingStatus?.latest_promotion_decision || 'KEEP_CURRENT_MODEL'}
+                </div>
+              </div>
+            </div>
+
+            {/* High Drift Warning Banner */}
+            {isHighDrift && (
+              <div style={{ padding: '0.75rem 1rem', backgroundColor: '#fffbeb', border: '1px solid #fef3c7', borderRadius: '6px', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                <AlertTriangle size={18} color="#d97706" />
+                <span style={{ fontSize: '0.82rem', fontWeight: 700, color: '#92400e' }}>
+                  HIGH DRIFT DETECTED — MODEL REVIEW REQUIRED. Governance rule enforces manual review; automatic promotion is disabled.
+                </span>
+              </div>
+            )}
+
+            {/* Dry Run Feedback Banner */}
+            {lastDryRunResult && (
+              <div style={{ padding: '0.75rem 1rem', backgroundColor: '#f0fdf4', border: '1px solid #bbf7d0', borderRadius: '6px' }}>
+                <div style={{ fontSize: '0.82rem', fontWeight: 700, color: '#166534', marginBottom: '0.2rem' }}>
+                  Evaluation Completed: {lastDryRunResult.status}
+                </div>
+                <div style={{ fontSize: '0.78rem', color: '#15803d' }}>
+                  {lastDryRunResult.message}
+                </div>
+              </div>
+            )}
+
+            {/* Sample Size Notice */}
+            {(!retrainingStatus?.latest_candidate || retrainingStatus?.latest_status === 'INSUFFICIENT_SAMPLE_SIZE') && (
+              <div style={{ padding: '0.85rem 1rem', backgroundColor: '#f8fafc', border: '1px solid var(--border-subtle)', borderRadius: '6px', textAlign: 'center' }}>
+                <div style={{ fontSize: '0.82rem', fontWeight: 700, color: 'var(--text-main)' }}>
+                  Insufficient sample size — current production model retained.
+                </div>
+                <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)', marginTop: '0.2rem' }}>
+                  No candidate model was trained because the minimum sample-size requirement (N ≥ 10 in trailing 30 days) was not met.
+                </div>
+              </div>
+            )}
+
+            {/* Candidate Model Comparison Table (if candidate exists) */}
+            {retrainingStatus?.latest_comparison ? (
+              <div>
+                <h4 style={{ fontSize: '0.9rem', fontWeight: 800, marginBottom: '0.5rem', color: 'var(--text-main)' }}>
+                  Dual-Model Validation Comparison (Candidate vs Production)
+                </h4>
+                <div className="data-table-container">
+                  <table className="data-table">
+                    <thead>
+                      <tr>
+                        <th>Target</th>
+                        <th>Current Production MAE</th>
+                        <th>Candidate XGBoost MAE</th>
+                        <th>Difference (Cand - Prod)</th>
+                        <th>Candidate R²</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td style={{ fontWeight: 700 }}>Total Subscription</td>
+                        <td>{retrainingStatus.latest_comparison.total_metrics_current.mae}×</td>
+                        <td>{retrainingStatus.latest_comparison.total_metrics_candidate.mae}×</td>
+                        <td style={{ fontWeight: 700, color: retrainingStatus.latest_comparison.total_mae_difference <= 0 ? 'var(--accent-positive)' : 'var(--accent-negative)' }}>
+                          {retrainingStatus.latest_comparison.total_mae_difference}×
+                        </td>
+                        <td>{retrainingStatus.latest_comparison.total_metrics_candidate.r2}</td>
+                      </tr>
+                      <tr>
+                        <td style={{ fontWeight: 700 }}>QIB Institutional</td>
+                        <td>{retrainingStatus.latest_comparison.qib_metrics_current.mae}×</td>
+                        <td>{retrainingStatus.latest_comparison.qib_metrics_candidate.mae}×</td>
+                        <td style={{ fontWeight: 700, color: retrainingStatus.latest_comparison.qib_mae_difference <= 0 ? 'var(--accent-positive)' : 'var(--accent-negative)' }}>
+                          {retrainingStatus.latest_comparison.qib_mae_difference}×
+                        </td>
+                        <td>{retrainingStatus.latest_comparison.qib_metrics_candidate.r2}</td>
+                      </tr>
+                      <tr>
+                        <td style={{ fontWeight: 700 }}>NII Corporate / HNI</td>
+                        <td>{retrainingStatus.latest_comparison.nii_metrics_current.mae}×</td>
+                        <td>{retrainingStatus.latest_comparison.nii_metrics_candidate.mae}×</td>
+                        <td style={{ fontWeight: 700, color: retrainingStatus.latest_comparison.nii_mae_difference <= 0 ? 'var(--accent-positive)' : 'var(--accent-negative)' }}>
+                          {retrainingStatus.latest_comparison.nii_mae_difference}×
+                        </td>
+                        <td>{retrainingStatus.latest_comparison.nii_metrics_candidate.r2}</td>
+                      </tr>
+                      <tr>
+                        <td style={{ fontWeight: 700 }}>Retail Individual</td>
+                        <td>{retrainingStatus.latest_comparison.retail_metrics_current.mae}×</td>
+                        <td>{retrainingStatus.latest_comparison.retail_metrics_candidate.mae}×</td>
+                        <td style={{ fontWeight: 700, color: retrainingStatus.latest_comparison.retail_mae_difference <= 0 ? 'var(--accent-positive)' : 'var(--accent-negative)' }}>
+                          {retrainingStatus.latest_comparison.retail_mae_difference}×
+                        </td>
+                        <td>{retrainingStatus.latest_comparison.retail_metrics_candidate.r2}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            ) : null}
+
+            {/* Retraining History Ledger */}
+            <div>
+              <h4 style={{ fontSize: '0.9rem', fontWeight: 800, marginBottom: '0.5rem', color: 'var(--text-main)', display: 'flex', alignItems: 'center', gap: '0.3rem' }}>
+                <FileText size={16} color="var(--brand-primary)" />
+                <span>Weekly Retraining History Log</span>
+              </h4>
+              {retrainingHistory.length === 0 ? (
+                <div style={{ padding: '1rem', textAlign: 'center', color: 'var(--text-muted)', fontSize: '0.8rem', backgroundColor: '#f8fafc', borderRadius: '6px' }}>
+                  No retraining runs recorded.
+                </div>
+              ) : (
+                <div className="data-table-container">
+                  <table className="data-table">
+                    <thead>
+                      <tr>
+                        <th>Date</th>
+                        <th>Run ID</th>
+                        <th>Status</th>
+                        <th>Eligible N</th>
+                        <th>Train N</th>
+                        <th>Val N</th>
+                        <th>Candidate</th>
+                        <th>Promotion</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {retrainingHistory.map((run) => (
+                        <tr key={run.run_id}>
+                          <td style={{ fontWeight: 700 }}>{run.evaluation_date}</td>
+                          <td style={{ fontFamily: 'JetBrains Mono', fontSize: '0.72rem', color: 'var(--text-subtle)' }}>
+                            {run.run_id ? run.run_id.slice(0, 8) + '...' : 'N/A'}
+                          </td>
+                          <td>
+                            <span className={`badge ${run.status === 'CANDIDATE_READY_FOR_PROMOTION' ? 'badge-high' : 'badge-neutral'}`}>
+                              {run.status}
+                            </span>
+                          </td>
+                          <td>{run.eligible_count}</td>
+                          <td>{run.training_sample_count}</td>
+                          <td>{run.validation_sample_count}</td>
+                          <td style={{ fontFamily: 'JetBrains Mono', fontSize: '0.75rem' }}>{run.candidate_version || 'NONE'}</td>
+                          <td>
+                            <span className="badge badge-neutral">{run.promotion_decision}</span>
+                          </td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              )}
+            </div>
+          </div>
+        )}
       </div>
 
       {/* Cumulative Performance Breakdown */}
