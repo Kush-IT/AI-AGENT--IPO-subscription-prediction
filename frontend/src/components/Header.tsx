@@ -36,17 +36,38 @@ export const Header: React.FC = () => {
             Dashboard
           </Link>
           <Link
-            to="/monitoring"
-            className={`nav-link ${location.pathname === '/monitoring' ? 'active' : ''}`}
+            to="/model-prediction"
+            className={`nav-link ${location.pathname === '/model-prediction' ? 'active' : ''}`}
           >
-            Monitoring & Drift
+            Model &amp; Prediction
+          </Link>
+          <Link
+            to="/diagrams"
+            className={`nav-link ${location.pathname === '/diagrams' ? 'active' : ''}`}
+          >
+            Diagrams
+          </Link>
+          <Link
+            to="/data-flow"
+            className={`nav-link ${location.pathname === '/data-flow' ? 'active' : ''}`}
+          >
+            Data Flow
           </Link>
           <Link
             to="/about"
             className={`nav-link ${location.pathname === '/about' ? 'active' : ''}`}
           >
-            About & Methodology
+            About &amp; Methodology
           </Link>
+          <a
+            href="http://localhost:8000/docs"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="nav-link"
+            title="Open Interactive FastAPI Swagger Documentation"
+          >
+            API Docs
+          </a>
 
           <div className={`api-badge ${isOnline ? 'online' : ''}`} title={healthData ? `Backend v${healthData.version} (${healthData.environment})` : 'Backend connection pending'}>
             <span className={`status-dot ${isOnline ? 'online' : ''}`} />

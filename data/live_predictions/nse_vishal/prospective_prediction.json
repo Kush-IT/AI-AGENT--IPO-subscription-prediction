@@ -1,0 +1,179 @@
+{
+  "company_name": "Vishal Nirmiti Limited",
+  "ipo_id": "nse_vishal",
+  "prediction_timestamp": "2026-09-30T09:30:00+05:30",
+  "feature_cutoff": "2026-09-30T09:59:59+05:30",
+  "prediction_status": "PREDICTED_EX_ANTE",
+  "predictions": {
+    "total_subscription": 3.76,
+    "qib_subscription": 11.48,
+    "nii_subscription": 3.14,
+    "retail_subscription": 30.7
+  },
+  "category_assessment": {
+    "strongest_predicted_category": "RETAIL",
+    "weakest_predicted_category": "NII",
+    "recommended_category": "RETAIL",
+    "category_ranking": [
+      {
+        "rank": 1,
+        "category": "RETAIL",
+        "predicted_multiple": 30.7
+      },
+      {
+        "rank": 2,
+        "category": "QIB",
+        "predicted_multiple": 11.48
+      },
+      {
+        "rank": 3,
+        "category": "NII",
+        "predicted_multiple": 3.14
+      }
+    ],
+    "edge_rationale": "RETAIL exhibits the strongest relative predicted demand (30.70x vs 11.48x next highest).",
+    "disclaimer": "Model-based category assessment only. Not investment or financial advice."
+  },
+  "confidence": {
+    "confidence_level": "HIGH",
+    "confidence_score": 82,
+    "justification_factors": [
+      "Predicted subscription falls well within dense historical training distribution.",
+      "Zero missing features; complete pre-IPO dataset provided.",
+      "Total model validated on 2024 test set (R\u00b2 = +0.674, Test MAE = 17.47x)."
+    ]
+  },
+  "risk_assessment": {
+    "overall_risk_level": "LOW",
+    "composite_risk_score": 15,
+    "identified_risk_factors": [
+      {
+        "risk_type": "ZERO_OR_NEGATIVE_GREY_MARKET_PREMIUM",
+        "severity": "MEDIUM",
+        "description": "Pre-IPO Grey Market Premium is zero or unavailable, indicating subdued unofficial listing appetite."
+      }
+    ],
+    "total_risk_factors_count": 1
+  },
+  "top_positive_factors": [
+    {
+      "feature": "issue_size_in_crore",
+      "feature_value": 178.0,
+      "shap_value": 0.038297,
+      "abs_shap_value": 0.038297,
+      "direction": "positive",
+      "attribution_statement": "issue_size_in_crore (178.0) contributed positively to the model prediction by +0.0383"
+    },
+    {
+      "feature": "revenue_latest_cr",
+      "feature_value": 500.0,
+      "shap_value": 0.02725,
+      "abs_shap_value": 0.02725,
+      "direction": "positive",
+      "attribution_statement": "revenue_latest_cr (500.0) contributed positively to the model prediction by +0.0272"
+    },
+    {
+      "feature": "issue_size_log",
+      "feature_value": 5.1874,
+      "shap_value": 0.018662,
+      "abs_shap_value": 0.018662,
+      "direction": "positive",
+      "attribution_statement": "issue_size_log (5.1874) contributed positively to the model prediction by +0.0187"
+    },
+    {
+      "feature": "nifty_1d_return",
+      "feature_value": 0.05,
+      "shap_value": 0.01469,
+      "abs_shap_value": 0.01469,
+      "direction": "positive",
+      "attribution_statement": "nifty_1d_return (0.05) contributed positively to the model prediction by +0.0147"
+    },
+    {
+      "feature": "price_high",
+      "feature_value": 220.0,
+      "shap_value": 0.014571,
+      "abs_shap_value": 0.014571,
+      "direction": "positive",
+      "attribution_statement": "price_high (220.0) contributed positively to the model prediction by +0.0146"
+    }
+  ],
+  "top_negative_factors": [
+    {
+      "feature": "gmp_percentage",
+      "feature_value": -2.27,
+      "shap_value": -1.121333,
+      "abs_shap_value": 1.121333,
+      "direction": "negative",
+      "attribution_statement": "gmp_percentage (-2.27) contributed negatively to the model prediction by -1.1213"
+    },
+    {
+      "feature": "positive_news_ratio",
+      "feature_value": 0.65,
+      "shap_value": -0.404564,
+      "abs_shap_value": 0.404564,
+      "direction": "negative",
+      "attribution_statement": "positive_news_ratio (0.65) contributed negatively to the model prediction by -0.4046"
+    },
+    {
+      "feature": "average_sentiment_score",
+      "feature_value": 0.5,
+      "shap_value": -0.187211,
+      "abs_shap_value": 0.187211,
+      "direction": "negative",
+      "attribution_statement": "average_sentiment_score (0.5) contributed negatively to the model prediction by -0.1872"
+    },
+    {
+      "feature": "negative_news_ratio",
+      "feature_value": 0.15,
+      "shap_value": -0.106096,
+      "abs_shap_value": 0.106096,
+      "direction": "negative",
+      "attribution_statement": "negative_news_ratio (0.15) contributed negatively to the model prediction by -0.1061"
+    },
+    {
+      "feature": "gmp_in_inr",
+      "feature_value": -5.0,
+      "shap_value": -0.088133,
+      "abs_shap_value": 0.088133,
+      "direction": "negative",
+      "attribution_statement": "gmp_in_inr (-5.0) contributed negatively to the model prediction by -0.0881"
+    }
+  ],
+  "sources": [
+    {
+      "category": "Issue Terms & Quotas",
+      "source": "SEBI DRHP/RHP Prospectus Filing",
+      "source_url": "https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListing=yes&sid=3&ssid=15&smid=0",
+      "feature_cutoff": "2026-09-30T09:59:59+05:30",
+      "verification_status": "EX_ANTE_VERIFIED"
+    },
+    {
+      "category": "Prospectus Restated Financials",
+      "source": "Prospectus Restated Financials & Capitaline Peer Multiples",
+      "source_url": "https://www.bseindia.com/corporates/Prospectus.aspx",
+      "feature_cutoff": "2026-09-30T09:59:59+05:30",
+      "verification_status": "EX_ANTE_VERIFIED"
+    },
+    {
+      "category": "Secondary Market Benchmarks",
+      "source": "NSE/BSE Historical Benchmark Index Feeds",
+      "source_url": "https://www.nseindia.com/reports-indices-historical-index-data",
+      "feature_cutoff": "2026-09-30T09:59:59+05:30",
+      "verification_status": "EX_ANTE_VERIFIED"
+    },
+    {
+      "category": "Grey Market Premium",
+      "source": "Ex-Ante Grey Market Aggregator (Chittorgarh/IPOWatch)",
+      "source_url": "https://www.chittorgarh.com/report/ipo-grey-market-premium-gmp/24/",
+      "feature_cutoff": "2026-09-30T09:59:59+05:30",
+      "verification_status": "EX_ANTE_VERIFIED"
+    },
+    {
+      "category": "Media News & Sentiment",
+      "source": "Financial Media Crawler (Economic Times, LiveMint, Moneycontrol) & FinBERT",
+      "source_url": "https://economictimes.indiatimes.com/markets/ipos/fpos",
+      "feature_cutoff": "2026-09-30T09:59:59+05:30",
+      "verification_status": "EX_ANTE_VERIFIED"
+    }
+  ]
+}

@@ -376,3 +376,19 @@ def run_retraining_endpoint(req: RetrainingRunRequest):
             detail={"error_code": "RETRAINING_FAILED", "message": str(e)},
         )
 
+
+@router.get(
+    "/sources/health",
+    summary="Get Health and Freshness of Upstream Data Sources",
+    description="Returns availability, latency, cache freshness, and stale state for NSE and IPOWatch feeds."
+)
+def api_get_monitoring_sources_health():
+    try:
+        from backend.connectors.live_ipo_discovery import LiveIPODiscoveryService
+        return LiveIPODiscoveryService().get_sources_health()
+    except Exception as exc:
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail={"error_code": "SOURCES_HEALTH_ERROR", "message": str(exc)}
+        )
+

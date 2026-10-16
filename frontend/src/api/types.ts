@@ -417,3 +417,141 @@ export interface RetrainingRunResponse {
   manifest_path: string | null;
 }
 
+// ==========================================
+// Phase 21: Live 15-Day IPO Intelligence Types
+// ==========================================
+
+export interface GMPIndicatorData {
+  gmp_in_inr: number | null;
+  gmp_percentage: number | null;
+  source: string;
+  source_url?: string | null;
+  observed_at?: string | null;
+  disclaimer: string;
+  status: 'ACTIVE' | 'STALE' | 'UNAVAILABLE' | string;
+}
+
+export interface PredictedSubscriptionsData {
+  total: number;
+  qib: number;
+  nii: number;
+  retail: number;
+  recommended_category: string;
+  confidence_level: string;
+  confidence_score: number;
+  overall_risk_level: string;
+  composite_risk_score?: number;
+  prediction_id?: string | null;
+  prediction_timestamp?: string | null;
+  cutoff_timestamp?: string | null;
+  prediction_status?: string | null;
+  prediction_source?: string | null;
+  feature_snapshot_timestamp?: string | null;
+  model_version?: string | null;
+  model_integrity_verified?: boolean;
+  ex_ante?: boolean;
+}
+
+export interface ActualSubscriptionsData {
+  total: number;
+  qib: number;
+  nii: number;
+  retail: number;
+  strongest_category: string;
+}
+
+export interface ListingMetricsData {
+  listing_date?: string | null;
+  issue_price: number;
+  actual_listing_price?: number | null;
+  listing_gain_pct?: number | null;
+  gmp_implied_listing_price?: number | null;
+  gmp_implied_gain_pct?: number | null;
+  implied_price_label: string;
+}
+
+export interface IPOIntelligenceCardData {
+  ipo_id: string;
+  company_name: string;
+  isin?: string;
+  sector: string;
+  ipo_open_date: string;
+  ipo_close_date: string;
+  listing_date?: string | null;
+  price_low: number;
+  price_high: number;
+  issue_size_in_crore: number;
+  lot_size: number;
+  status: string;
+  record_source?: string;
+  data_status?: string;
+  last_updated_ist?: string;
+}
+
+export interface UpcomingIPOForecastData extends IPOIntelligenceCardData {
+  days_until_open: number;
+  days_until_close?: number | null;
+  bidding_day?: number | null;
+  total_bidding_days?: number | null;
+  gmp_data?: GMPIndicatorData | null;
+  gmp_implied_listing_price?: number | null;
+  gmp_implied_gain_pct?: number | null;
+  gmp_forecast_note: string;
+  predicted_subscriptions?: PredictedSubscriptionsData | null;
+  top_positive_factors?: Array<{ feature_name: string; shap_value: number }>;
+  top_negative_factors?: Array<{ feature_name: string; shap_value: number }>;
+  prediction_status: string;
+  data_sources?: Array<{ field: string; source: string; observed_at: string; status: string }>;
+  live_subscription_multiple?: number | null;
+  exchange_status?: string;
+}
+
+export interface PastIPOResultData extends IPOIntelligenceCardData {
+  days_since_close: number;
+  actual_subscriptions?: ActualSubscriptionsData | null;
+  has_ex_ante_prediction: boolean;
+  predicted_subscriptions?: PredictedSubscriptionsData | null;
+  prediction_error_ae?: number | null;
+  prediction_error_ape_pct?: number | null;
+  listing_metrics?: ListingMetricsData | null;
+  closing_gmp?: GMPIndicatorData | null;
+  outcome_source: string;
+  outcome_observed_at?: string | null;
+}
+
+export interface MarketOverviewSummaryData {
+  reference_date: string;
+  upcoming_ipos_count: number;
+  active_bidding_count: number;
+  recently_closed_count: number;
+  avg_recent_listing_gain_pct?: number | null;
+  avg_recent_total_subscription?: number | null;
+  strongest_recent_sector?: string | null;
+  last_updated_ist?: string;
+  data_status?: string;
+  sources_health?: Record<string, any>;
+  gmp_disclaimer: string;
+}
+
+export interface IPODeepDiveResponseData {
+  card: IPOIntelligenceCardData;
+  timeline: Array<{ milestone: string; timestamp: string; status: string }>;
+  forecast?: UpcomingIPOForecastData | null;
+  past_result?: PastIPOResultData | null;
+  feature_snapshot?: Record<string, any> | null;
+  source_provenance: Array<{ field: string; source: string; url: string; confidence: string }>;
+}
+
+export interface SourcesHealthData {
+  service: string;
+  overall_status: string;
+  data_status: string;
+  cache: {
+    status: string;
+    age_seconds?: number | null;
+    ttl_seconds: number;
+    last_updated_ist?: string | null;
+  };
+  sources: Record<string, any>;
+}
+

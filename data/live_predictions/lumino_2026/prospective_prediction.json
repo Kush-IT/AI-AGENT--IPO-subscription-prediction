@@ -1,0 +1,113 @@
+{
+  "company_name": "Lumino Industries Ltd",
+  "ipo_id": "lumino_2026",
+  "prediction_timestamp": "2026-08-27T09:30:00+05:30",
+  "feature_cutoff": "2026-08-27T09:59:59+05:30",
+  "prediction_status": "PREDICTED_EX_ANTE",
+  "predictions": {
+    "total_subscription": 70.86,
+    "qib_subscription": 149.22,
+    "nii_subscription": 64.79,
+    "retail_subscription": 20.73
+  },
+  "category_assessment": {
+    "recommended_category": "QIB"
+  },
+  "confidence": {
+    "confidence_level": "MEDIUM",
+    "confidence_score": 74
+  },
+  "risk_assessment": {
+    "overall_risk_level": "LOW",
+    "composite_risk_score": 0
+  },
+  "top_positive_factors": [
+    {
+      "feature": "gmp_percentage",
+      "feature_value": 56.1,
+      "shap_value": 0.656044,
+      "abs_shap_value": 0.656044,
+      "direction": "positive",
+      "attribution_statement": "gmp_percentage (56.1) contributed positively to the model prediction by +0.6560"
+    },
+    {
+      "feature": "gmp_in_inr",
+      "feature_value": 375.0,
+      "shap_value": 0.166496,
+      "abs_shap_value": 0.166496,
+      "direction": "positive",
+      "attribution_statement": "gmp_in_inr (375.0) contributed positively to the model prediction by +0.1665"
+    },
+    {
+      "feature": "negative_news_ratio",
+      "feature_value": 0.04,
+      "shap_value": 0.082143,
+      "abs_shap_value": 0.082143,
+      "direction": "positive",
+      "attribution_statement": "negative_news_ratio (0.04) contributed positively to the model prediction by +0.0821"
+    }
+  ],
+  "top_negative_factors": [
+    {
+      "feature": "positive_news_ratio",
+      "feature_value": 0.82,
+      "shap_value": -0.199639,
+      "abs_shap_value": 0.199639,
+      "direction": "negative",
+      "attribution_statement": "positive_news_ratio (0.82) contributed negatively to the model prediction by -0.1996"
+    },
+    {
+      "feature": "revenue_latest_cr",
+      "feature_value": 2089.31,
+      "shap_value": -0.032659,
+      "abs_shap_value": 0.032659,
+      "direction": "negative",
+      "attribution_statement": "revenue_latest_cr (2089.31) contributed negatively to the model prediction by -0.0327"
+    },
+    {
+      "feature": "price_band_spread_pct",
+      "feature_value": 5.2632,
+      "shap_value": -0.028186,
+      "abs_shap_value": 0.028186,
+      "direction": "negative",
+      "attribution_statement": "price_band_spread_pct (5.2632) contributed negatively to the model prediction by -0.0282"
+    }
+  ],
+  "sources": [
+    {
+      "category": "Issue Terms & Quotas",
+      "source": "SEBI DRHP/RHP Prospectus Filing",
+      "source_url": "https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListing=yes&sid=3&ssid=15&smid=0",
+      "feature_cutoff": "2026-08-27T09:59:59+05:30",
+      "verification_status": "EX_ANTE_VERIFIED"
+    },
+    {
+      "category": "Prospectus Restated Financials",
+      "source": "Prospectus Restated Financials & Capitaline Peer Multiples",
+      "source_url": "https://www.bseindia.com/corporates/Prospectus.aspx",
+      "feature_cutoff": "2026-08-27T09:59:59+05:30",
+      "verification_status": "EX_ANTE_VERIFIED"
+    },
+    {
+      "category": "Secondary Market Benchmarks",
+      "source": "NSE/BSE Historical Benchmark Index Feeds",
+      "source_url": "https://www.nseindia.com/reports-indices-historical-index-data",
+      "feature_cutoff": "2026-08-27T09:59:59+05:30",
+      "verification_status": "EX_ANTE_VERIFIED"
+    },
+    {
+      "category": "Grey Market Premium",
+      "source": "Ex-Ante Grey Market Aggregator (Chittorgarh/IPOWatch)",
+      "source_url": "https://www.chittorgarh.com/report/ipo-grey-market-premium-gmp/24/",
+      "feature_cutoff": "2026-08-27T09:59:59+05:30",
+      "verification_status": "EX_ANTE_VERIFIED"
+    },
+    {
+      "category": "Media News & Sentiment",
+      "source": "Financial Media Crawler (Economic Times, LiveMint, Moneycontrol) & FinBERT",
+      "source_url": "https://economictimes.indiatimes.com/markets/ipos/fpos",
+      "feature_cutoff": "2026-08-27T09:59:59+05:30",
+      "verification_status": "EX_ANTE_VERIFIED"
+    }
+  ]
+}

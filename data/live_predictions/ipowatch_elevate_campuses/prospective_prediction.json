@@ -1,0 +1,113 @@
+{
+  "company_name": "Elevate Campuses",
+  "ipo_id": "ipowatch_elevate_campuses",
+  "prediction_timestamp": "2026-09-18T12:17:32.267078+00:00",
+  "feature_cutoff": "2026-09-23T09:59:59+05:30",
+  "prediction_status": "PREDICTED_EX_ANTE",
+  "predictions": {
+    "total_subscription": 3.63,
+    "qib_subscription": 11.46,
+    "nii_subscription": 3.09,
+    "retail_subscription": 7.04
+  },
+  "category_assessment": {
+    "recommended_category": "QIB"
+  },
+  "confidence": {
+    "confidence_level": "HIGH",
+    "confidence_score": 100
+  },
+  "risk_assessment": {
+    "overall_risk_level": "LOW",
+    "composite_risk_score": 15
+  },
+  "top_positive_factors": [
+    {
+      "feature": "issue_size_in_crore",
+      "feature_value": 500.0,
+      "shap_value": 0.036701,
+      "abs_shap_value": 0.036701,
+      "direction": "positive",
+      "attribution_statement": "issue_size_in_crore (500.0) contributed positively to the model prediction by +0.0367"
+    },
+    {
+      "feature": "revenue_latest_cr",
+      "feature_value": 500.0,
+      "shap_value": 0.02725,
+      "abs_shap_value": 0.02725,
+      "direction": "positive",
+      "attribution_statement": "revenue_latest_cr (500.0) contributed positively to the model prediction by +0.0272"
+    },
+    {
+      "feature": "issue_size_log",
+      "feature_value": 6.2166,
+      "shap_value": 0.018662,
+      "abs_shap_value": 0.018662,
+      "direction": "positive",
+      "attribution_statement": "issue_size_log (6.2166) contributed positively to the model prediction by +0.0187"
+    }
+  ],
+  "top_negative_factors": [
+    {
+      "feature": "gmp_percentage",
+      "feature_value": 0.0,
+      "shap_value": -1.124257,
+      "abs_shap_value": 1.124257,
+      "direction": "negative",
+      "attribution_statement": "gmp_percentage (0.0) contributed negatively to the model prediction by -1.1243"
+    },
+    {
+      "feature": "positive_news_ratio",
+      "feature_value": 0.65,
+      "shap_value": -0.404564,
+      "abs_shap_value": 0.404564,
+      "direction": "negative",
+      "attribution_statement": "positive_news_ratio (0.65) contributed negatively to the model prediction by -0.4046"
+    },
+    {
+      "feature": "average_sentiment_score",
+      "feature_value": 0.5,
+      "shap_value": -0.187211,
+      "abs_shap_value": 0.187211,
+      "direction": "negative",
+      "attribution_statement": "average_sentiment_score (0.5) contributed negatively to the model prediction by -0.1872"
+    }
+  ],
+  "sources": [
+    {
+      "category": "Issue Terms & Quotas",
+      "source": "SEBI DRHP/RHP Prospectus Filing",
+      "source_url": "https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListing=yes&sid=3&ssid=15&smid=0",
+      "feature_cutoff": "2026-09-23T09:59:59+05:30",
+      "verification_status": "EX_ANTE_VERIFIED"
+    },
+    {
+      "category": "Prospectus Restated Financials",
+      "source": "Prospectus Restated Financials & Capitaline Peer Multiples",
+      "source_url": "https://www.bseindia.com/corporates/Prospectus.aspx",
+      "feature_cutoff": "2026-09-23T09:59:59+05:30",
+      "verification_status": "EX_ANTE_VERIFIED"
+    },
+    {
+      "category": "Secondary Market Benchmarks",
+      "source": "NSE/BSE Historical Benchmark Index Feeds",
+      "source_url": "https://www.nseindia.com/reports-indices-historical-index-data",
+      "feature_cutoff": "2026-09-23T09:59:59+05:30",
+      "verification_status": "EX_ANTE_VERIFIED"
+    },
+    {
+      "category": "Grey Market Premium",
+      "source": "Ex-Ante Grey Market Aggregator (Chittorgarh/IPOWatch)",
+      "source_url": "https://www.chittorgarh.com/report/ipo-grey-market-premium-gmp/24/",
+      "feature_cutoff": "2026-09-23T09:59:59+05:30",
+      "verification_status": "EX_ANTE_VERIFIED"
+    },
+    {
+      "category": "Media News & Sentiment",
+      "source": "Financial Media Crawler (Economic Times, LiveMint, Moneycontrol) & FinBERT",
+      "source_url": "https://economictimes.indiatimes.com/markets/ipos/fpos",
+      "feature_cutoff": "2026-09-23T09:59:59+05:30",
+      "verification_status": "EX_ANTE_VERIFIED"
+    }
+  ]
+}

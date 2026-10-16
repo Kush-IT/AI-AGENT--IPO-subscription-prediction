@@ -12,7 +12,7 @@ from fastapi.exceptions import RequestValidationError
 from starlette.exceptions import HTTPException as StarletteHTTPException
 
 from backend.config import settings
-from backend.routers import health, monitoring_routes
+from backend.routers import health, monitoring_routes, intelligence_routes
 from backend.api import v1_routes
 from backend.api.observability import METRICS, log_structured
 
@@ -21,8 +21,14 @@ from backend.api.observability import METRICS, log_structured
 async def lifespan(app: FastAPI):
     """Lifecycle event handler for backend startup and shutdown."""
     print(f"Starting {settings.PROJECT_NAME} v{settings.VERSION} [{settings.ENVIRONMENT}]")
-    yield
-    print(f"Shutting down {settings.PROJECT_NAME}")
+    from backend.monitoring.hourly_refresh import get_hourly_refresh_service
+    refresh_service = get_hourly_refresh_service()
+    refresh_service.start()
+    try:
+        yield
+    finally:
+        print(f"Shutting down {settings.PROJECT_NAME}")
+        await refresh_service.stop()
 
 
 app = FastAPI(
@@ -101,6 +107,7 @@ async def generic_exception_handler(request: Request, exc: Exception):
 app.include_router(health.router)
 app.include_router(v1_routes.router)
 app.include_router(monitoring_routes.router)
+app.include_router(intelligence_routes.router)
 
 
 @app.get("/", tags=["Root"])

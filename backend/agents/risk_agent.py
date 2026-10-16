@@ -6,6 +6,15 @@ from typing import Dict, Any, List
 from backend.agents.state import IPOState
 
 
+def _safe_float(val: Any, default: float) -> float:
+    if val is None:
+        return default
+    try:
+        return float(val)
+    except (ValueError, TypeError):
+        return default
+
+
 def risk_analysis_node(state: IPOState) -> Dict[str, Any]:
     """
     Evaluates multi-dimensional investment and modeling risk factors.
@@ -22,9 +31,9 @@ def risk_analysis_node(state: IPOState) -> Dict[str, Any]:
     risk_points = 0
     
     # 1. Valuation Risk
-    pe = float(features.get("pe_ratio", 25.0))
-    ind_pe = float(features.get("industry_pe", 30.0))
-    val_disc = float(features.get("valuation_discount_pct", 0.0))
+    pe = _safe_float(features.get("pe_ratio"), 25.0)
+    ind_pe = _safe_float(features.get("industry_pe"), 30.0)
+    val_disc = _safe_float(features.get("valuation_discount_pct"), 0.0)
     
     if pe > 60.0 or val_disc < -40.0:
         risk_points += 25
@@ -42,7 +51,7 @@ def risk_analysis_node(state: IPOState) -> Dict[str, Any]:
         })
         
     # 2. Offering Scale Friction Risk
-    issue_size = float(features.get("issue_size_in_crore", 500.0))
+    issue_size = _safe_float(features.get("issue_size_in_crore"), 500.0)
     if issue_size > 3000.0:
         risk_points += 20
         risk_factors.append({
@@ -59,7 +68,7 @@ def risk_analysis_node(state: IPOState) -> Dict[str, Any]:
         })
         
     # 3. Macro Market Volatility Risk
-    vix = float(features.get("india_vix", 14.5))
+    vix = _safe_float(features.get("india_vix"), 14.5)
     if vix > 19.0:
         risk_points += 25
         risk_factors.append({
@@ -76,9 +85,9 @@ def risk_analysis_node(state: IPOState) -> Dict[str, Any]:
         })
         
     # 4. Solvency & Cash Flow Fundamentals
-    de_ratio = float(features.get("debt_equity_ratio", 0.5))
-    ocf = float(features.get("operating_cash_flow_cr", 10.0))
-    ebitda_margin = float(features.get("ebitda_margin_pct", 15.0))
+    de_ratio = _safe_float(features.get("debt_equity_ratio"), 0.5)
+    ocf = _safe_float(features.get("operating_cash_flow_cr"), 10.0)
+    ebitda_margin = _safe_float(features.get("ebitda_margin_pct"), 15.0)
     
     if de_ratio > 2.5:
         risk_points += 20
@@ -103,8 +112,8 @@ def risk_analysis_node(state: IPOState) -> Dict[str, Any]:
         })
         
     # 5. Sentiment & Grey Market Speculation
-    gmp_pct = float(features.get("gmp_percentage", 0.0))
-    neg_ratio = float(features.get("negative_news_ratio", 0.15))
+    gmp_pct = _safe_float(features.get("gmp_percentage"), 0.0)
+    neg_ratio = _safe_float(features.get("negative_news_ratio"), 0.15)
     
     if gmp_pct <= 0.0:
         risk_points += 15

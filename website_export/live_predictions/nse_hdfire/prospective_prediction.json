@@ -1,0 +1,26 @@
+{
+  "company_name": "HD Fire Protect Limited",
+  "ipo_id": "nse_hdfire",
+  "prediction_timestamp": "2026-10-13T09:30:00+05:30",
+  "feature_cutoff": "2026-10-13T09:59:59+05:30",
+  "prediction_status": "PREDICTED_EX_ANTE",
+  "predictions": {
+    "total_subscription": 14.2,
+    "qib_subscription": 70.4,
+    "nii_subscription": 12.9,
+    "retail_subscription": 23.7
+  },
+  "category_assessment": {
+    "recommended_category": "QIB"
+  },
+  "top_positive_factors": [
+    "nifty_20d_return (+0.5519999861717224)",
+    "nifty_5d_return (+0.26499998569488525)",
+    "sensex_5d_return (+0.21199999749660492)"
+  ],
+  "top_negative_factors": [
+    "gmp_percentage (-0.20000000298023224)",
+    "ofs_percentage (-0.1420000046491623)",
+    "issue_size_in_crore (-0.11999999731779099)"
+  ]
+}

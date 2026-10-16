@@ -86,6 +86,61 @@ export const IPOForm: React.FC<IPOFormProps> = ({ onSubmit, isLoading }) => {
     onSubmit(DEFAULT_FORM_VALUES);
   };
 
+  const [rhpStatus, setRhpStatus] = useState<string | null>(null);
+
+  const handleRhpFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+
+    const reader = new FileReader();
+    reader.onload = (event) => {
+      const text = event.target?.result as string;
+      if (!text) return;
+
+      const parsed: Partial<IPOAnalysisRequest> = {};
+
+      const priceMatch = text.match(/(?:price band|floor price).*?₹?\s*([0-9,]+(?:\.[0-9]+)?)\s*(?:to|-)\s*₹?\s*([0-9,]+(?:\.[0-9]+)?)/i) ||
+                         text.match(/₹\s*([0-9,]+(?:\.[0-9]+)?)\s*(?:to|-)\s*₹?\s*([0-9,]+(?:\.[0-9]+)?)/i);
+      if (priceMatch) {
+        parsed.price_low = parseFloat(priceMatch[1].replace(/,/g, ''));
+        parsed.price_high = parseFloat(priceMatch[2].replace(/,/g, ''));
+      }
+
+      const sizeMatch = text.match(/(?:aggregating up to|aggregating to|issue of).*?₹?\s*([0-9,]+(?:\.[0-9]+)?)\s*(?:crore|cr)/i);
+      if (sizeMatch) {
+        parsed.issue_size_in_crore = parseFloat(sizeMatch[1].replace(/,/g, ''));
+      }
+
+      const lotMatch = text.match(/(?:minimum bid lot of|lot size of|in multiples of)\s*([0-9]+)\s*equity shares/i);
+      if (lotMatch) {
+        parsed.lot_size = parseInt(lotMatch[1], 10);
+      }
+
+      const revMatch = text.match(/(?:revenue from operations|total income).*?₹?\s*([0-9,]+(?:\.[0-9]+)?)\s*(?:crore|cr)/i);
+      if (revMatch) {
+        parsed.revenue_latest_cr = parseFloat(revMatch[1].replace(/,/g, ''));
+      }
+
+      const patMatch = text.match(/(?:profit after tax|restated profit|pat).*?₹?\s*([0-9,]+(?:\.[0-9]+)?)\s*(?:crore|cr)/i);
+      if (patMatch) {
+        parsed.pat_latest_cr = parseFloat(patMatch[1].replace(/,/g, ''));
+      }
+
+      const cleanName = file.name.replace(/\.[^/.]+$/, '').replace(/[-_]/g, ' ').replace(/\b(rhp|drhp|prospectus)\b/gi, '').trim();
+      if (cleanName.length > 2) {
+        parsed.company_name = cleanName.charAt(0).toUpperCase() + cleanName.slice(1);
+      }
+
+      setFormData((prev) => ({
+        ...prev,
+        ...parsed,
+      }));
+      setRhpStatus(`Extracted parameters from ${file.name}`);
+      setTimeout(() => setRhpStatus(null), 5000);
+    };
+    reader.readAsText(file);
+  };
+
   return (
     <div className="card">
       <div className="card-header">
@@ -95,8 +150,38 @@ export const IPOForm: React.FC<IPOFormProps> = ({ onSubmit, isLoading }) => {
             <span>Pre-IPO Input Parameters</span>
           </h2>
           <p className="card-subtitle">Ex-ante offering terms & fundamentals observed prior to open</p>
+          {rhpStatus && (
+            <p style={{ fontSize: '0.74rem', color: '#10b981', fontWeight: 600, marginTop: '0.2rem' }}>
+              ✓ {rhpStatus}
+            </p>
+          )}
         </div>
         <div style={{ display: 'flex', gap: '0.4rem', flexWrap: 'wrap' }}>
+          <label
+            style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '0.3rem',
+              background: 'none',
+              border: '1px solid var(--border-strong)',
+              borderRadius: '6px',
+              padding: '0.35rem 0.65rem',
+              fontSize: '0.75rem',
+              color: 'var(--text-main)',
+              fontWeight: 600,
+              cursor: 'pointer',
+            }}
+            title="Upload SEBI RHP / DRHP Document (.txt / .json)"
+          >
+            <Sparkles size={12} color="#0284c7" />
+            <span>Upload RHP / DRHP</span>
+            <input
+              type="file"
+              accept=".txt,.json,.csv"
+              onChange={handleRhpFileUpload}
+              style={{ display: 'none' }}
+            />
+          </label>
           <button
             type="button"
             onClick={handleFillSyntheticExample}

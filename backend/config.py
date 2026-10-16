@@ -28,6 +28,11 @@ class Settings(BaseSettings):
     DATABASE_URL: str = "postgresql://postgres:postgres@localhost:5432/ipo_agentic_ai"
     NEWS_API_KEY: str = ""
     MARKET_DATA_API_KEY: str = ""
+
+    # Live IPO Intelligence Cache Configuration
+    IPO_DATA_TTL_MINUTES: int = 60
+    SUBSCRIPTION_DATA_TTL_MINUTES: int = 60
+    GMP_DATA_TTL_MINUTES: int = 30
     
     model_config = SettingsConfigDict(
         env_file=".env",

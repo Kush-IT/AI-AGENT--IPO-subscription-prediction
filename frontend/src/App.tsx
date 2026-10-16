@@ -6,6 +6,9 @@ import { Footer } from './components/Footer';
 import { Dashboard } from './pages/Dashboard';
 import { About } from './pages/About';
 import { Monitoring } from './pages/Monitoring';
+import { ModelPrediction } from './pages/ModelPrediction';
+import { Diagrams } from './pages/Diagrams';
+import { DataFlow } from './pages/DataFlow';
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -26,6 +29,9 @@ export const App: React.FC = () => {
           <main className="main-content">
             <Routes>
               <Route path="/" element={<Dashboard />} />
+              <Route path="/model-prediction" element={<ModelPrediction />} />
+              <Route path="/diagrams" element={<Diagrams />} />
+              <Route path="/data-flow" element={<DataFlow />} />
               <Route path="/monitoring" element={<Monitoring />} />
               <Route path="/about" element={<About />} />
             </Routes>

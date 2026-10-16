@@ -53,18 +53,18 @@ def feature_preparation_node(state: IPOState) -> Dict[str, Any]:
             elif col == "market_trend":
                 default_val = str(val_data.get("market_trend", raw_input.get("market_trend", "BULLISH"))).strip()
             else:
-                default_val = 0.0
+                default_val = None
             features[col] = default_val
-            warnings.append(f"Feature '{col}' was unavailable prior to cutoff; imputed with domain neutral default ({default_val}).")
+            warnings.append(f"Feature '{col}' was unavailable prior to cutoff; imputed via training fold median.")
             if col not in feature_provenance:
                 feature_provenance[col] = {
                     "field": col,
                     "value": default_val,
-                    "source": "Domain Imputation Default",
+                    "source": "FoldPreprocessor Historical Median Imputation",
                     "source_url": "N/A",
                     "observed_at": cutoff_ts,
                     "feature_cutoff": cutoff_ts,
-                    "status": "IMPUTED_DEFAULT",
+                    "status": "IMPUTED_MEDIAN",
                     "validation_status": "EX_ANTE_VALID"
                 }
                 

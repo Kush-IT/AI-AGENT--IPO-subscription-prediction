@@ -1,0 +1,470 @@
+{
+  "version": "v1.1.0",
+  "evaluation_timestamp": "2026-09-18T18:00:46.313472+00:00",
+  "dataset_version": "ipo_features_preipo_v2 / ipo_targets_v2 (106 samples)",
+  "feature_version": "Group_G_All_Features_Plus_Sector (45 features)",
+  "chronological_test_period": "2024-02-07 to 2024-07-03 (N=17)",
+  "production_governance": {
+    "final_candidates_frozen": true,
+    "automatic_promotion_enabled": false,
+    "promotion_status": "KEEP_CURRENT_MODEL",
+    "promotion_rationale": "Production model total_xgboost_log1p remains optimal. High-demand calibrations inflate error on mainstream 0-50x offerings without statistically defensible overall net gain."
+  },
+  "production_model": {
+    "filename": "total_xgboost_log1p.joblib",
+    "sha256": "3b00118e9e12cddd7f5f4ce59d5b6fef4211826efaffa03a36af5ed845550cc6",
+    "test_metrics": {
+      "mae": 17.43,
+      "rmse": 22.92,
+      "r2": 0.666,
+      "median_ae": 14.84,
+      "mean_ratio": 0.825,
+      "median_ratio": 0.735,
+      "bias": -12.8,
+      "underprediction_pct": 82.4,
+      "overprediction_pct": 17.6,
+      "tiers": {
+        "0-10x": {
+          "count": 1,
+          "mae": 0.86,
+          "rmse": 0.86,
+          "bias": -0.86,
+          "mean_ratio": 0.91
+        },
+        "10-25x": {
+          "count": 1,
+          "mae": 4.33,
+          "rmse": 4.33,
+          "bias": -4.33,
+          "mean_ratio": 0.766
+        },
+        "25-50x": {
+          "count": 3,
+          "mae": 12.39,
+          "rmse": 14.72,
+          "bias": 3.3,
+          "mean_ratio": 1.119
+        },
+        "50-100x": {
+          "count": 7,
+          "mae": 16.07,
+          "rmse": 18.73,
+          "bias": -11.54,
+          "mean_ratio": 0.849
+        },
+        "100x+": {
+          "count": 5,
+          "mae": 28.3,
+          "rmse": 34.08,
+          "bias": -28.3,
+          "mean_ratio": 0.764
+        }
+      }
+    }
+  },
+  "category_weighted_ensemble": {
+    "formula": "0.50*QIB + 0.15*NII + 0.35*Retail",
+    "status": "REJECTED_AS_PRODUCTION_PRIMARY",
+    "rationale": "Introduces massive +158% upward bias across normal IPOs (CV Ratio=2.582, MedAE=14.43x vs 6.77x). Retained solely for experimental/investor reference.",
+    "test_metrics": {
+      "mae": 17.09,
+      "rmse": 21.98,
+      "r2": 0.693,
+      "median_ae": 15.57,
+      "mean_ratio": 1.043,
+      "median_ratio": 1.122,
+      "bias": 3.18,
+      "underprediction_pct": 35.3,
+      "overprediction_pct": 64.7,
+      "tiers": {
+        "0-10x": {
+          "count": 1,
+          "mae": 2.93,
+          "rmse": 2.93,
+          "bias": 2.93,
+          "mean_ratio": 1.306
+        },
+        "10-25x": {
+          "count": 1,
+          "mae": 0.36,
+          "rmse": 0.36,
+          "bias": 0.36,
+          "mean_ratio": 1.02
+        },
+        "25-50x": {
+          "count": 3,
+          "mae": 16.74,
+          "rmse": 24.68,
+          "bias": 16.74,
+          "mean_ratio": 1.601
+        },
+        "50-100x": {
+          "count": 7,
+          "mae": 13.86,
+          "rmse": 15.63,
+          "bias": 3.67,
+          "mean_ratio": 1.048
+        },
+        "100x+": {
+          "count": 5,
+          "mae": 27.99,
+          "rmse": 30.55,
+          "bias": -5.02,
+          "mean_ratio": 0.958
+        }
+      }
+    }
+  },
+  "candidates_evaluated": {
+    "1. XGBoost + log1p (Production Arch)": {
+      "mae": 16.48,
+      "rmse": 23.25,
+      "r2": 0.657,
+      "median_ae": 15.5,
+      "mean_ratio": 0.831,
+      "median_ratio": 0.688,
+      "bias": -12.36,
+      "underprediction_pct": 76.5,
+      "overprediction_pct": 23.5,
+      "tiers": {
+        "0-10x": {
+          "count": 1,
+          "mae": 2.91,
+          "rmse": 2.91,
+          "bias": -2.91,
+          "mean_ratio": 0.697
+        },
+        "10-25x": {
+          "count": 1,
+          "mae": 9.37,
+          "rmse": 9.37,
+          "bias": -9.37,
+          "mean_ratio": 0.493
+        },
+        "25-50x": {
+          "count": 3,
+          "mae": 9.98,
+          "rmse": 11.62,
+          "bias": 0.55,
+          "mean_ratio": 1.02
+        },
+        "50-100x": {
+          "count": 7,
+          "mae": 15.15,
+          "rmse": 18.15,
+          "bias": -9.78,
+          "mean_ratio": 0.872
+        },
+        "100x+": {
+          "count": 5,
+          "mae": 26.37,
+          "rmse": 35.72,
+          "bias": -26.2,
+          "mean_ratio": 0.781
+        }
+      }
+    },
+    "2. XGBoost + raw target": {
+      "mae": 13.29,
+      "rmse": 19.6,
+      "r2": 0.756,
+      "median_ae": 9.16,
+      "mean_ratio": 0.935,
+      "median_ratio": 0.856,
+      "bias": -4.74,
+      "underprediction_pct": 52.9,
+      "overprediction_pct": 47.1,
+      "tiers": {
+        "0-10x": {
+          "count": 1,
+          "mae": 0.93,
+          "rmse": 0.93,
+          "bias": 0.93,
+          "mean_ratio": 1.096
+        },
+        "10-25x": {
+          "count": 1,
+          "mae": 6.58,
+          "rmse": 6.58,
+          "bias": -6.58,
+          "mean_ratio": 0.644
+        },
+        "25-50x": {
+          "count": 3,
+          "mae": 9.15,
+          "rmse": 11.01,
+          "bias": 2.37,
+          "mean_ratio": 1.085
+        },
+        "50-100x": {
+          "count": 7,
+          "mae": 11.97,
+          "rmse": 15.54,
+          "bias": -6.76,
+          "mean_ratio": 0.912
+        },
+        "100x+": {
+          "count": 5,
+          "mae": 21.45,
+          "rmse": 29.77,
+          "bias": -6.93,
+          "mean_ratio": 0.942
+        }
+      }
+    },
+    "3. Random Forest + log1p": {
+      "mae": 21.99,
+      "rmse": 27.27,
+      "r2": 0.528,
+      "median_ae": 17.56,
+      "mean_ratio": 0.753,
+      "median_ratio": 0.841,
+      "bias": -18.14,
+      "underprediction_pct": 94.1,
+      "overprediction_pct": 5.9,
+      "tiers": {
+        "0-10x": {
+          "count": 1,
+          "mae": 1.77,
+          "rmse": 1.77,
+          "bias": -1.77,
+          "mean_ratio": 0.816
+        },
+        "10-25x": {
+          "count": 1,
+          "mae": 2.73,
+          "rmse": 2.73,
+          "bias": -2.73,
+          "mean_ratio": 0.852
+        },
+        "25-50x": {
+          "count": 3,
+          "mae": 15.9,
+          "rmse": 19.99,
+          "bias": 5.91,
+          "mean_ratio": 1.212
+        },
+        "50-100x": {
+          "count": 7,
+          "mae": 19.24,
+          "rmse": 20.74,
+          "bias": -19.24,
+          "mean_ratio": 0.749
+        },
+        "100x+": {
+          "count": 5,
+          "mae": 37.39,
+          "rmse": 41.03,
+          "bias": -37.39,
+          "mean_ratio": 0.688
+        }
+      }
+    },
+    "4. LightGBM + log1p": {
+      "mae": 17.92,
+      "rmse": 23.5,
+      "r2": 0.649,
+      "median_ae": 15.97,
+      "mean_ratio": 0.957,
+      "median_ratio": 0.88,
+      "bias": -3.17,
+      "underprediction_pct": 58.8,
+      "overprediction_pct": 41.2,
+      "tiers": {
+        "0-10x": {
+          "count": 1,
+          "mae": 1.8,
+          "rmse": 1.8,
+          "bias": 1.8,
+          "mean_ratio": 1.187
+        },
+        "10-25x": {
+          "count": 1,
+          "mae": 4.73,
+          "rmse": 4.73,
+          "bias": -4.73,
+          "mean_ratio": 0.745
+        },
+        "25-50x": {
+          "count": 3,
+          "mae": 13.83,
+          "rmse": 19.75,
+          "bias": 8.65,
+          "mean_ratio": 1.311
+        },
+        "50-100x": {
+          "count": 7,
+          "mae": 21.24,
+          "rmse": 21.92,
+          "bias": 4.32,
+          "mean_ratio": 1.056
+        },
+        "100x+": {
+          "count": 5,
+          "mae": 21.61,
+          "rmse": 31.08,
+          "bias": -21.43,
+          "mean_ratio": 0.821
+        }
+      }
+    },
+    "5. XGBoost + log1p + Duan Smearing": {
+      "mae": 16.37,
+      "rmse": 23.1,
+      "r2": 0.661,
+      "median_ae": 15.29,
+      "mean_ratio": 0.836,
+      "median_ratio": 0.692,
+      "bias": -12.04,
+      "underprediction_pct": 76.5,
+      "overprediction_pct": 23.5,
+      "tiers": {
+        "0-10x": {
+          "count": 1,
+          "mae": 2.87,
+          "rmse": 2.87,
+          "bias": -2.87,
+          "mean_ratio": 0.701
+        },
+        "10-25x": {
+          "count": 1,
+          "mae": 9.32,
+          "rmse": 9.32,
+          "bias": -9.32,
+          "mean_ratio": 0.496
+        },
+        "25-50x": {
+          "count": 3,
+          "mae": 9.99,
+          "rmse": 11.68,
+          "bias": 0.71,
+          "mean_ratio": 1.025
+        },
+        "50-100x": {
+          "count": 7,
+          "mae": 15.06,
+          "rmse": 18.05,
+          "bias": -9.43,
+          "mean_ratio": 0.877
+        },
+        "100x+": {
+          "count": 5,
+          "mae": 26.12,
+          "rmse": 35.45,
+          "bias": -25.72,
+          "mean_ratio": 0.785
+        }
+      }
+    },
+    "6. Two-Stage Hurdle Model (Classifier + Regressor)": {
+      "mae": 16.77,
+      "rmse": 22.43,
+      "r2": 0.68,
+      "median_ae": 14.83,
+      "mean_ratio": 0.865,
+      "median_ratio": 0.705,
+      "bias": -9.93,
+      "underprediction_pct": 64.7,
+      "overprediction_pct": 35.3,
+      "tiers": {
+        "0-10x": {
+          "count": 1,
+          "mae": 2.89,
+          "rmse": 2.89,
+          "bias": -2.89,
+          "mean_ratio": 0.699
+        },
+        "10-25x": {
+          "count": 1,
+          "mae": 9.34,
+          "rmse": 9.34,
+          "bias": -9.34,
+          "mean_ratio": 0.495
+        },
+        "25-50x": {
+          "count": 3,
+          "mae": 10.34,
+          "rmse": 12.14,
+          "bias": 0.98,
+          "mean_ratio": 1.035
+        },
+        "50-100x": {
+          "count": 7,
+          "mae": 15.95,
+          "rmse": 18.06,
+          "bias": -7.12,
+          "mean_ratio": 0.907
+        },
+        "100x+": {
+          "count": 5,
+          "mae": 26.05,
+          "rmse": 33.86,
+          "bias": -21.95,
+          "mean_ratio": 0.817
+        }
+      }
+    },
+    "7. XGBoost + log1p + Residual Fold Calibration": {
+      "mae": 16.73,
+      "rmse": 22.68,
+      "r2": 0.673,
+      "median_ae": 15.5,
+      "mean_ratio": 0.857,
+      "median_ratio": 0.688,
+      "bias": -10.51,
+      "underprediction_pct": 64.7,
+      "overprediction_pct": 35.3,
+      "tiers": {
+        "0-10x": {
+          "count": 1,
+          "mae": 2.91,
+          "rmse": 2.91,
+          "bias": -2.91,
+          "mean_ratio": 0.697
+        },
+        "10-25x": {
+          "count": 1,
+          "mae": 9.37,
+          "rmse": 9.37,
+          "bias": -9.37,
+          "mean_ratio": 0.493
+        },
+        "25-50x": {
+          "count": 3,
+          "mae": 9.98,
+          "rmse": 11.62,
+          "bias": 0.55,
+          "mean_ratio": 1.02
+        },
+        "50-100x": {
+          "count": 7,
+          "mae": 16.04,
+          "rmse": 18.23,
+          "bias": -7.53,
+          "mean_ratio": 0.902
+        },
+        "100x+": {
+          "count": 5,
+          "mae": 25.97,
+          "rmse": 34.4,
+          "bias": -23.05,
+          "mean_ratio": 0.808
+        }
+      }
+    }
+  },
+  "candidate_artifacts": {
+    "total_xgboost_candidate.joblib": {
+      "sha256": "2e4d5b9451e2191775a70be4ee7f5852fe84af5aa4dbccd50b6f5f32ea5d263a",
+      "model_type": "XGBRegressor",
+      "transform": "np.log1p",
+      "hyperparameters": {
+        "n_estimators": 100,
+        "max_depth": 3,
+        "learning_rate": 0.05,
+        "subsample": 0.8,
+        "colsample_bytree": 0.8
+      }
+    }
+  }
+}

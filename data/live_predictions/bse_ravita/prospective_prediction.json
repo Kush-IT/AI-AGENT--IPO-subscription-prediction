@@ -1,0 +1,26 @@
+{
+  "company_name": "Ravita Engineering Services Limited",
+  "ipo_id": "bse_ravita",
+  "prediction_timestamp": "2026-10-13T09:30:00+05:30",
+  "feature_cutoff": "2026-10-13T09:59:59+05:30",
+  "prediction_status": "PREDICTED_EX_ANTE",
+  "predictions": {
+    "total_subscription": 10.4,
+    "qib_subscription": 70.1,
+    "nii_subscription": 8.3,
+    "retail_subscription": 23.2
+  },
+  "category_assessment": {
+    "recommended_category": "QIB"
+  },
+  "top_positive_factors": [
+    "nifty_20d_return (+0.5580000281333923)",
+    "nifty_5d_return (+0.26499998569488525)",
+    "sensex_5d_return (+0.21199999749660492)"
+  ],
+  "top_negative_factors": [
+    "gmp_percentage (-0.39800000190734863)",
+    "issue_size_in_crore (-0.12300000339746475)",
+    "ofs_percentage (-0.12099999934434891)"
+  ]
+}
